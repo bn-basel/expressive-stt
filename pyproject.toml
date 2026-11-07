@@ -1,0 +1,51 @@
+[project]
+name = "expressive-stt"
+version = "0.1.0"
+description = "Speech-to-text that keeps how something was said: emotion, pitch, pace, laughter, whispers."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "whisperx==3.8.6",
+    "torch~=2.8.0",
+    "torchaudio~=2.8.0",
+    "torchvision~=0.23.0",
+    "funasr>=1.2",
+    "transformers>=4.48",
+    "librosa>=0.10",
+    "soundfile>=0.12",
+    "numpy>=2.1",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "python-multipart>=0.0.9",
+]
+
+[project.scripts]
+estt = "expressive_stt.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "httpx>=0.27"]
+eval = ["datasets>=3", "pyarrow>=17", "jiwer>=3", "scikit-learn>=1.5"]
+
+[tool.uv]
+default-groups = ["dev"]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128", marker = "sys_platform == 'win32' or sys_platform == 'linux'" }]
+torchaudio = [{ index = "pytorch-cu128", marker = "sys_platform == 'win32' or sys_platform == 'linux'" }]
+torchvision = [{ index = "pytorch-cu128", marker = "sys_platform == 'win32' or sys_platform == 'linux'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/expressive_stt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,39 @@
+# Python / tooling
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Audio, models, data, outputs (never committed)
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.opus
+*.webm
+*.mp4
+*.pt
+*.bin
+*.safetensors
+*.onnx
+*.ckpt
+*.parquet
+*.zip
+models/
+data/
+outputs/
+eval/data/
+eval/cache/
+.cache/
+hf_cache/
