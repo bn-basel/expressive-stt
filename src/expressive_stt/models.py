@@ -61,7 +61,8 @@ class Transcriber:
         self.batch_size = batch_size
         compute = "float16" if device == "cuda" else "int8"
         with quiet():
-            self.model = whisperx.load_model(model, device, compute_type=compute, language=language)
+            self.model = whisperx.load_model(model, device, compute_type=compute, language=language,
+                                             threads=os.cpu_count() or 4)
         self._align: dict[str, tuple] = {}
 
     def __call__(self, audio: np.ndarray, split_pause: float = 1.0) -> tuple[list[Segment], str]:
@@ -110,7 +111,9 @@ class EmotionModel:
         with contextlib.redirect_stderr(open(os.devnull, "w")), quiet():
             from funasr import AutoModel  # its import and load print hundreds of lines
 
-            self.model = AutoModel(model=model, hub="hf", device=device, disable_update=True,
+            # FunASR calls torch.set_num_threads(ncpu) for the whole process; default is 4.
+            self.model = AutoModel(model=model, hub="hf", device=device, ncpu=os.cpu_count() or 4,
+                                   disable_update=True,
                                    disable_pbar=True, log_level="ERROR")
 
     def __call__(self, audio: np.ndarray) -> dict[str, float]:

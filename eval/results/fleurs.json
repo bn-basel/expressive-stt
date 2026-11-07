@@ -1,0 +1,57 @@
+{
+  "dataset": "google/fleurs test split (CC BY 4.0), first N rows of test.tsv",
+  "model": "whisperx/large-v3-turbo (float16, cuda, language forced)",
+  "normalisation": {
+    "all": "lowercase; every Unicode punctuation character replaced by a space; spaces collapsed",
+    "ar": "also: diacritics (U+064B-U+0652, U+0670) and tatweel removed; أ إ آ -> ا; ى -> ي; ة -> ه",
+    "not_done": "no number normalisation (e.g. '100' vs 'one hundred' counts as an error)",
+    "en_extra": "wer_whisper_normaliser: English WER with Whisper's EnglishTextNormalizer (numbers to digits, contractions; no spelling map), the usual way Whisper FLEURS numbers are reported"
+  },
+  "languages": {
+    "en_us": {
+      "n": 100,
+      "wer": 0.0573,
+      "cer": 0.0367,
+      "wer_whisper_normaliser": 0.0549,
+      "empty_hypotheses": 0,
+      "audio_seconds": 956.3,
+      "transcribe_seconds": 29.3,
+      "examples": [
+        {
+          "reference": "unfortunately studying traffic flow is difficult because driver behavior cannot be predicted with one hundred percent certainty",
+          "hypothesis": "unfortunately studying traffic flow is difficult because driver behavior cannot be predicted with 100 certainty"
+        },
+        {
+          "reference": "unfortunately studying traffic flow is difficult because driver behavior cannot be predicted with one hundred percent certainty",
+          "hypothesis": "unfortunately studying traffic flow is difficult because driver behavior cannot be predicted with 100 certainty"
+        },
+        {
+          "reference": "twentieth century research has shown that there are two pools of genetic variation hidden and expressed",
+          "hypothesis": "20th century research has shown that there are two pools of genetic variation hidden and expressed"
+        }
+      ]
+    },
+    "ar_eg": {
+      "n": 100,
+      "wer": 0.102,
+      "cer": 0.0371,
+      "empty_hypotheses": 0,
+      "audio_seconds": 1071.1,
+      "transcribe_seconds": 46.0,
+      "examples": [
+        {
+          "reference": "ومن بين اكثر الطرق شيوعا التي تستخدم لتوضيح اهميه التنشئه الاجتماعيه الاعتماد علي الحالات القليله المؤسفه للاطفال الذين عانوا من خلال الاهمال او سوء الحظ او الايذاء المتعمد غير مرتبطين اجتماعيا من جانب البالغين اثناء نشاتهم",
+          "hypothesis": "ومن بين اكثر الطرق شيوعنا التي تستخدم لتوضيح اهميه التنشاه الاجتماعيه الاعتماد علي الحالات القليله المؤسفه للاطفال الذين عانوا من خلال الاهمال او سوء الحظ او الايزاء المتعمد غير مرتبطين اجتماعيا من جانب البالغين اثناء نشاتهم"
+        },
+        {
+          "reference": "ومن بين اكثر الطرق شيوعا التي تستخدم لتوضيح اهميه التنشئه الاجتماعيه الاعتماد علي الحالات القليله المؤسفه للاطفال الذين عانوا من خلال الاهمال او سوء الحظ او الايذاء المتعمد غير مرتبطين اجتماعيا من جانب البالغين اثناء نشاتهم",
+          "hypothesis": "ومن بين اكثر طرق شروعا التي تستخدم لتوضيح اهميه التنشئه الاجتماعيه لاعتماد علي حالات القليله المؤسفه للاطفال الذين عانوا من خلال الاهمال او سوق الحظ او الازاء المتعمد غير المرتبطين الاجتماعيا بين جانب البلغين اثناء نشاتهم"
+        },
+        {
+          "reference": "قامت فرقه ايروشميث بالغاء باقي حفلاتهم في جولتهم الموسيقيه",
+          "hypothesis": "قامت فرقه ايروشميث بالغاء باقي حفلتهم في جولتهم الموسيقيه"
+        }
+      ]
+    }
+  }
+}

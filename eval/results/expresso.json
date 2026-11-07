@@ -1,0 +1,267 @@
+{
+  "dataset": "Expresso read speech (CC BY-NC 4.0), first 100 utterances per speaker x style",
+  "n_clips": 2000,
+  "clips_with_no_transcribed_speech": {
+    "default": 0,
+    "happy": 0,
+    "laughing": 0,
+    "sad": 0,
+    "whisper": 26
+  },
+  "emotion_test_speakers": {
+    "pipeline_segments": {
+      "n": 600,
+      "acc_9class": 0.437,
+      "acc_3class": 0.547,
+      "macro_f1_3class": 0.542,
+      "confusion_3class": {
+        "labels": [
+          "neutral",
+          "happy",
+          "sad"
+        ],
+        "matrix": [
+          [
+            59,
+            120,
+            21
+          ],
+          [
+            44,
+            153,
+            3
+          ],
+          [
+            64,
+            20,
+            116
+          ]
+        ]
+      },
+      "predicted_9class_counts": {
+        "angry": 33,
+        "disgusted": 12,
+        "fearful": 2,
+        "happy": 235,
+        "neutral": 101,
+        "other": 12,
+        "sad": 130,
+        "surprised": 75
+      }
+    },
+    "whole_clip": {
+      "n": 600,
+      "acc_9class": 0.44,
+      "acc_3class": 0.572,
+      "macro_f1_3class": 0.544,
+      "confusion_3class": {
+        "labels": [
+          "neutral",
+          "happy",
+          "sad"
+        ],
+        "matrix": [
+          [
+            41,
+            138,
+            21
+          ],
+          [
+            14,
+            181,
+            5
+          ],
+          [
+            60,
+            19,
+            121
+          ]
+        ]
+      },
+      "predicted_9class_counts": {
+        "angry": 29,
+        "disgusted": 16,
+        "happy": 235,
+        "neutral": 95,
+        "other": 11,
+        "sad": 133,
+        "surprised": 81
+      }
+    }
+  },
+  "emotion_all_speakers": {
+    "pipeline_segments": {
+      "n": 1200,
+      "acc_9class": 0.528,
+      "acc_3class": 0.613,
+      "macro_f1_3class": 0.6,
+      "confusion_3class": {
+        "labels": [
+          "neutral",
+          "happy",
+          "sad"
+        ],
+        "matrix": [
+          [
+            115,
+            256,
+            29
+          ],
+          [
+            63,
+            329,
+            8
+          ],
+          [
+            75,
+            33,
+            292
+          ]
+        ]
+      },
+      "predicted_9class_counts": {
+        "angry": 42,
+        "disgusted": 20,
+        "fearful": 5,
+        "happy": 539,
+        "neutral": 154,
+        "other": 19,
+        "sad": 310,
+        "surprised": 111
+      }
+    },
+    "whole_clip": {
+      "n": 1200,
+      "acc_9class": 0.532,
+      "acc_3class": 0.633,
+      "macro_f1_3class": 0.602,
+      "confusion_3class": {
+        "labels": [
+          "neutral",
+          "happy",
+          "sad"
+        ],
+        "matrix": [
+          [
+            89,
+            282,
+            29
+          ],
+          [
+            21,
+            370,
+            9
+          ],
+          [
+            68,
+            31,
+            301
+          ]
+        ]
+      },
+      "predicted_9class_counts": {
+        "angry": 37,
+        "disgusted": 25,
+        "fearful": 3,
+        "happy": 542,
+        "neutral": 142,
+        "other": 19,
+        "sad": 316,
+        "surprised": 116
+      }
+    }
+  },
+  "whisper": {
+    "audioset_or_rule": {
+      "thresholds": {
+        "audioset_whisper": 0.01,
+        "max_voiced_fraction": 0.0
+      },
+      "test": {
+        "precision": 0.974,
+        "recall": 0.935,
+        "f1": 0.954,
+        "n_pos": 200,
+        "n_neg": 800
+      },
+      "test_detection_rate_by_style": {
+        "default": 0.005,
+        "happy": 0.015,
+        "laughing": 0.005,
+        "sad": 0.0,
+        "whisper": 0.935
+      }
+    },
+    "audioset_only": {
+      "thresholds": {
+        "audioset_whisper": 0.01
+      },
+      "test": {
+        "precision": 1.0,
+        "recall": 0.895,
+        "f1": 0.945,
+        "n_pos": 200,
+        "n_neg": 800
+      },
+      "test_detection_rate_by_style": {
+        "default": 0.0,
+        "happy": 0.0,
+        "laughing": 0.0,
+        "sad": 0.0,
+        "whisper": 0.895
+      }
+    },
+    "voicing_rule_only": {
+      "thresholds": {
+        "max_voiced_fraction": 0.2
+      },
+      "test": {
+        "precision": 0.969,
+        "recall": 0.925,
+        "f1": 0.946,
+        "n_pos": 200,
+        "n_neg": 800
+      },
+      "test_detection_rate_by_style": {
+        "default": 0.005,
+        "happy": 0.015,
+        "laughing": 0.005,
+        "sad": 0.005,
+        "whisper": 0.925
+      }
+    }
+  },
+  "laughter": {
+    "thresholds": {
+      "audioset_laughter": 0.01
+    },
+    "test": {
+      "precision": 0.875,
+      "recall": 0.735,
+      "f1": 0.799,
+      "n_pos": 200,
+      "n_neg": 800
+    },
+    "test_detection_rate_by_style": {
+      "default": 0.025,
+      "happy": 0.065,
+      "laughing": 0.735,
+      "sad": 0.015,
+      "whisper": 0.0
+    },
+    "test_recall_on_clips_with_a_marked_laugh": {
+      "n": 38,
+      "recall": 0.895
+    }
+  },
+  "split": {
+    "dev": [
+      "ex01",
+      "ex02"
+    ],
+    "test": [
+      "ex03",
+      "ex04"
+    ]
+  }
+}

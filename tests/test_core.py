@@ -79,7 +79,7 @@ def test_sound_tags_and_whisper_rule():
     base = {"laughter": 0.0, "whisper": 0.0, "singing": 0.0, "humming": 0.0, "sigh": 0.0, "crying": 0.0}
     assert sound_tags(base, voiced_fraction=0.8) == []
     assert [t.label for t in sound_tags({**base, "laughter": 0.9}, 0.8)] == ["laughing"]
-    rule = sound_tags(base, voiced_fraction=0.05)
+    rule = sound_tags(base, voiced_fraction=0.0)
     assert rule[0].label == "whisper" and rule[0].source == "rule"
 
 

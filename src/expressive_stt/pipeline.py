@@ -13,13 +13,15 @@ from .schema import Event, Result, Segment, Tag
 SR = 16_000
 
 # Decision thresholds. Laughter/whisper values were picked on Expresso speakers
-# ex01-ex02 and tested on ex03-ex04 (see eval/README.md).
-LAUGH_T = 0.30
-WHISPER_T = 0.30
-WHISPER_MAX_VOICED = 0.20  # whispered speech has (almost) no pitch
-OTHER_SOUND_T = 0.40
+# ex01-ex02 and tested on ex03-ex04 (see eval/README.md). AST gives laughing speech
+# very low AudioSet "Laughter" scores, hence the low laughter threshold.
+LAUGH_T = 0.01
+WHISPER_T = 0.01
+WHISPER_MAX_VOICED = 0.0  # whispered speech has no pitch at all
+OTHER_SOUND_T = 0.40  # singing/humming/sigh/crying: not tuned or evaluated
 MIN_GAP = 0.4  # shortest non-speech stretch worth checking for laughter
-MIN_EMOTION_SEC = 0.4
+MIN_EMOTION_SEC = 0.2
+EMOTION_PAD = 0.5  # seconds of context on each side; chosen on dev speakers
 
 
 def load_audio(path: str) -> np.ndarray:
@@ -95,7 +97,7 @@ class Pipeline:
         if self.opts.emotion:
             for s in segments:
                 if s.end - s.start >= MIN_EMOTION_SEC:
-                    scores = self.emo(clip(s.start, s.end))
+                    scores = self.emo(clip(max(0, s.start - EMOTION_PAD), s.end + EMOTION_PAD))
                     label = max(scores, key=scores.get)
                     s.emotion_scores = {k: round(v, 3) for k, v in scores.items()}
                     s.emotion = Tag(label, round(scores[label], 3), "emotion2vec")
@@ -104,6 +106,7 @@ class Pipeline:
         if self.opts.sounds:
             seg_scores = self.snd([clip(s.start, s.end) for s in segments]) if segments else []
             for s, sc in zip(segments, seg_scores):
+                s.sound_scores = {k: round(v, 3) for k, v in sc.items()}
                 s.tags += sound_tags(sc, s.prosody.voiced_fraction if s.prosody else 1.0)
             gaps = speech_gaps(segments, duration)
             for (a, b), sc in zip(gaps, self.snd([clip(a, b) for a, b in gaps]) if gaps else []):

@@ -1,0 +1,13 @@
+{
+  "n_pos": 40,
+  "n_neg": 85,
+  "recall": 0.95,
+  "false_alarm_rate": 0.094,
+  "false_alarms_by_category": {
+    "coughing": 2,
+    "crying_baby": 3,
+    "door_wood_knock": 1,
+    "silence": 1,
+    "snoring": 1
+  }
+}

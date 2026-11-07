@@ -1,0 +1,42 @@
+{
+  "clip": {
+    "seconds": 63.38,
+    "source": "FLEURS en_us test (CC BY 4.0), whole clips concatenated",
+    "fleurs_files": [
+      "12741024238657315067.wav",
+      "9055240296608129734.wav",
+      "621925716775998155.wav",
+      "10335587906469246566.wav",
+      "2589557553267364799.wav",
+      "17824557748066874904.wav",
+      "8173060820032255320.wav"
+    ]
+  },
+  "torch": "2.8.0+cu128",
+  "whisperx": "3.8.6",
+  "ctranslate2": "4.8.5",
+  "python": "3.12.13",
+  "cpu": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+  "timing": "model load, then one untimed warm-up run, then one timed run of Pipeline().run(path) with all models on",
+  "runs": {
+    "cuda": {
+      "device": "cuda",
+      "torch_threads": 24,
+      "gpu": "NVIDIA GeForce RTX 5080",
+      "model_load_seconds": 17.02,
+      "first_run_seconds": 4.14,
+      "warm_run_seconds": 1.9,
+      "rtf": 0.03,
+      "segments": 7
+    },
+    "cpu": {
+      "device": "cpu",
+      "torch_threads": 24,
+      "model_load_seconds": 17.39,
+      "first_run_seconds": 22.53,
+      "warm_run_seconds": 20.66,
+      "rtf": 0.3259,
+      "segments": 7
+    }
+  }
+}

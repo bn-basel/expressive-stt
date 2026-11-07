@@ -43,6 +43,7 @@ class Segment:
     emotion_scores: dict[str, float] = field(default_factory=dict)
     prosody: Prosody | None = None
     tags: list[Tag] = field(default_factory=list)
+    sound_scores: dict[str, float] = field(default_factory=dict)  # raw AudioSet group scores
 
 
 @dataclass

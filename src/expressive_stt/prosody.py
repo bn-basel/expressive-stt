@@ -61,7 +61,8 @@ def segment_prosody(track: Track, seg: Segment) -> Prosody:
     if seg.words:
         spoken = sum(max(w.end - w.start, 0.05) for w in seg.words)
         rate = len(seg.words) / max(spoken, 0.3)
-    return Prosody(pitch, None, energy, None, rate, None, voiced_frac)
+    r = lambda x, n: None if x is None else round(x, n)  # noqa: E731
+    return Prosody(r(pitch, 1), None, round(energy, 2), None, r(rate, 2), None, round(voiced_frac, 3))
 
 
 def add_relative(segments: list[Segment]) -> None:
