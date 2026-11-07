@@ -19,7 +19,7 @@ def main(argv: list[str] | None = None) -> int:
     t.add_argument("--model", default="large-v3-turbo", help="Whisper model name")
     t.add_argument("--language", "-l", help="language code, e.g. en or ar (default: detect)")
     t.add_argument("--device", default="auto", choices=["auto", "cuda", "cpu"])
-    t.add_argument("--no-emotion", action="store_true")
+    t.add_argument("--no-emotion", action="store_true", help="skip emotion, energy and expression")
     t.add_argument("--no-sounds", action="store_true", help="skip laughter/whisper detection")
 
     s = sub.add_parser("serve", help="run the local HTTP API")

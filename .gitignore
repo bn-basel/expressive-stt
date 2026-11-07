@@ -32,6 +32,7 @@ build/
 *.zip
 models/
 data/
+!src/expressive_stt/data/
 outputs/
 eval/data/
 eval/cache/

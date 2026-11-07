@@ -2,7 +2,7 @@
 
 Expresso: Nguyen et al. 2023, https://huggingface.co/datasets/ylacombe/expresso, CC BY-NC 4.0.
 Four speakers (ex01-ex04) read the same kind of script in different styles. We take the first
-N utterances per (speaker, style) for the styles we can score: default, happy, sad, whisper,
+N utterances per (speaker, style) for the styles we can score: default, happy, sad, whisper, confused,
 laughing. Only the parquet row groups that contain wanted rows are fetched.
 Audio is saved as 16 kHz FLAC under eval/data/expresso/ (git-ignored, not redistributed).
 
@@ -20,7 +20,7 @@ import pyarrow.parquet as pq
 import soundfile as sf
 from huggingface_hub import HfFileSystem
 
-STYLES = {"default", "happy", "sad", "whisper", "laughing"}
+STYLES = {"default", "happy", "sad", "whisper", "laughing", "confused"}
 OUT = Path(__file__).parent / "data" / "expresso"
 REPO = "datasets/ylacombe/expresso/read"
 

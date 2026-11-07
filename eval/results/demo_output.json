@@ -1,1005 +1,2381 @@
 {
-  "language": "en",
-  "duration": 42.82,
-  "segments": [
-    {
-      "start": 0.21,
-      "end": 6.85,
-      "text": "In Mumbai, Thursday is going to be cloudy while Friday will be mostly clear with a high of 28 and a low of both days.",
-      "words": [
-        {
-          "start": 0.21,
-          "end": 0.29,
-          "word": "In",
-          "score": 0.873
-        },
-        {
-          "start": 0.31,
-          "end": 0.81,
-          "word": "Mumbai,",
-          "score": 0.902
-        },
-        {
-          "start": 1.01,
-          "end": 1.41,
-          "word": "Thursday",
-          "score": 0.842
-        },
-        {
-          "start": 1.47,
-          "end": 1.51,
-          "word": "is",
-          "score": 0.998
-        },
-        {
-          "start": 1.53,
-          "end": 1.67,
-          "word": "going",
-          "score": 0.777
-        },
-        {
-          "start": 1.69,
-          "end": 1.73,
-          "word": "to",
-          "score": 0.988
-        },
-        {
-          "start": 1.77,
-          "end": 1.85,
-          "word": "be",
-          "score": 0.778
-        },
-        {
-          "start": 1.91,
-          "end": 2.29,
-          "word": "cloudy",
-          "score": 0.906
-        },
-        {
-          "start": 2.39,
-          "end": 2.61,
-          "word": "while",
-          "score": 0.794
-        },
-        {
-          "start": 2.65,
-          "end": 3.07,
-          "word": "Friday",
-          "score": 0.781
-        },
-        {
-          "start": 3.11,
-          "end": 3.25,
-          "word": "will",
-          "score": 0.997
-        },
-        {
-          "start": 3.27,
-          "end": 3.35,
-          "word": "be",
-          "score": 0.544
-        },
-        {
-          "start": 3.47,
-          "end": 3.87,
-          "word": "mostly",
-          "score": 0.857
-        },
-        {
-          "start": 3.93,
-          "end": 4.23,
-          "word": "clear",
-          "score": 0.738
-        },
-        {
-          "start": 4.29,
-          "end": 4.41,
-          "word": "with",
-          "score": 0.919
-        },
-        {
-          "start": 4.49,
-          "end": 4.53,
-          "word": "a",
-          "score": 0.203
-        },
-        {
-          "start": 4.55,
-          "end": 4.75,
-          "word": "high",
-          "score": 0.894
-        },
-        {
-          "start": 4.77,
-          "end": 4.81,
-          "word": "of",
-          "score": 0.999
-        },
-        {
-          "start": 4.83,
-          "end": 5.37,
-          "word": "28",
-          "score": 0.409
-        },
-        {
-          "start": 5.47,
-          "end": 5.57,
-          "word": "and",
-          "score": 0.781
-        },
-        {
-          "start": 5.61,
-          "end": 5.63,
-          "word": "a",
-          "score": 0.967
-        },
-        {
-          "start": 5.73,
-          "end": 6.01,
-          "word": "low",
-          "score": 0.901
-        },
-        {
-          "start": 6.07,
-          "end": 6.15,
-          "word": "of",
-          "score": 0.666
-        },
-        {
-          "start": 6.23,
-          "end": 6.49,
-          "word": "both",
-          "score": 0.875
-        },
-        {
-          "start": 6.55,
-          "end": 6.85,
-          "word": "days.",
-          "score": 0.824
-        }
-      ],
-      "emotion": {
-        "label": "happy",
-        "score": 1.0,
-        "source": "emotion2vec"
-      },
-      "emotion_scores": {
-        "angry": 0.0,
-        "disgusted": 0.0,
-        "fearful": 0.0,
-        "happy": 1.0,
-        "neutral": 0.0,
-        "other": 0.0,
-        "sad": 0.0,
-        "surprised": 0.0
-      },
-      "prosody": {
-        "pitch_hz": 286.8,
-        "pitch_semitones": -0.93,
-        "energy_db": -25.59,
-        "energy_rel_db": 1.41,
-        "rate_wps": 4.74,
-        "rate_rel": 1.06,
-        "voiced_fraction": 0.911
-      },
-      "tags": [],
-      "sound_scores": {
-        "laughter": 0.002,
-        "whisper": 0.0,
-        "singing": 0.0,
-        "humming": 0.0,
-        "sigh": 0.0,
-        "crying": 0.0
-      }
-    },
-    {
-      "start": 7.75,
-      "end": 14.9,
-      "text": "In Mumbai, Thursday is going to be cloudy while Friday will be mostly clear with a high of 28 and a low of both days.",
-      "words": [
-        {
-          "start": 7.75,
-          "end": 7.83,
-          "word": "In",
-          "score": 0.937
-        },
-        {
-          "start": 7.85,
-          "end": 8.39,
-          "word": "Mumbai,",
-          "score": 0.862
-        },
-        {
-          "start": 8.63,
-          "end": 9.07,
-          "word": "Thursday",
-          "score": 0.725
-        },
-        {
-          "start": 9.11,
-          "end": 9.17,
-          "word": "is",
-          "score": 0.796
-        },
-        {
-          "start": 9.19,
-          "end": 9.31,
-          "word": "going",
-          "score": 0.889
-        },
-        {
-          "start": 9.33,
-          "end": 9.37,
-          "word": "to",
-          "score": 0.994
-        },
-        {
-          "start": 9.41,
-          "end": 9.49,
-          "word": "be",
-          "score": 0.974
-        },
-        {
-          "start": 9.57,
-          "end": 9.99,
-          "word": "cloudy",
-          "score": 0.86
-        },
-        {
-          "start": 10.23,
-          "end": 10.43,
-          "word": "while",
-          "score": 0.874
-        },
-        {
-          "start": 10.49,
-          "end": 10.89,
-          "word": "Friday",
-          "score": 0.668
-        },
-        {
-          "start": 10.93,
-          "end": 11.09,
-          "word": "will",
-          "score": 0.75
-        },
-        {
-          "start": 11.11,
-          "end": 11.17,
-          "word": "be",
-          "score": 0.865
-        },
-        {
-          "start": 11.25,
-          "end": 11.7,
-          "word": "mostly",
-          "score": 0.789
-        },
-        {
-          "start": 11.78,
-          "end": 12.08,
-          "word": "clear",
-          "score": 0.729
-        },
-        {
-          "start": 12.14,
-          "end": 12.3,
-          "word": "with",
-          "score": 0.801
-        },
-        {
-          "start": 12.36,
-          "end": 12.4,
-          "word": "a",
-          "score": 0.496
-        },
-        {
-          "start": 12.44,
-          "end": 12.66,
-          "word": "high",
-          "score": 0.769
-        },
-        {
-          "start": 12.68,
-          "end": 12.74,
-          "word": "of",
-          "score": 0.748
-        },
-        {
-          "start": 12.76,
-          "end": 13.38,
-          "word": "28",
-          "score": 0.401
-        },
-        {
-          "start": 13.46,
-          "end": 13.54,
-          "word": "and",
-          "score": 0.797
-        },
-        {
-          "start": 13.58,
-          "end": 13.6,
-          "word": "a",
-          "score": 0.964
-        },
-        {
-          "start": 13.7,
-          "end": 13.98,
-          "word": "low",
-          "score": 0.893
-        },
-        {
-          "start": 14.02,
-          "end": 14.08,
-          "word": "of",
-          "score": 0.75
-        },
-        {
-          "start": 14.2,
-          "end": 14.46,
-          "word": "both",
-          "score": 0.91
-        },
-        {
-          "start": 14.52,
-          "end": 14.9,
-          "word": "days.",
-          "score": 0.889
-        }
-      ],
-      "emotion": {
-        "label": "happy",
-        "score": 1.0,
-        "source": "emotion2vec"
-      },
-      "emotion_scores": {
-        "angry": 0.0,
-        "disgusted": 0.0,
-        "fearful": 0.0,
-        "happy": 1.0,
-        "neutral": 0.0,
-        "other": 0.0,
-        "sad": 0.0,
-        "surprised": 0.0
-      },
-      "prosody": {
-        "pitch_hz": 318.3,
-        "pitch_semitones": 0.88,
-        "energy_db": -26.68,
-        "energy_rel_db": 0.32,
-        "rate_wps": 4.48,
-        "rate_rel": 1.0,
-        "voiced_fraction": 0.86
-      },
-      "tags": [],
-      "sound_scores": {
-        "laughter": 0.001,
-        "whisper": 0.0,
-        "singing": 0.0,
-        "humming": 0.0,
-        "sigh": 0.001,
-        "crying": 0.0
-      }
-    },
-    {
-      "start": 16.92,
-      "end": 25.16,
-      "text": "In Mumbai, Thursday is going to be cloudy while Friday will be mostly clear with a high of 28 and a low of both days.",
-      "words": [
-        {
-          "start": 16.92,
-          "end": 17.04,
-          "word": "In",
-          "score": 0.896
-        },
-        {
-          "start": 17.08,
-          "end": 17.6,
-          "word": "Mumbai,",
-          "score": 0.896
-        },
-        {
-          "start": 17.66,
-          "end": 18.16,
-          "word": "Thursday",
-          "score": 0.838
-        },
-        {
-          "start": 18.24,
-          "end": 18.3,
-          "word": "is",
-          "score": 0.756
-        },
-        {
-          "start": 18.34,
-          "end": 18.5,
-          "word": "going",
-          "score": 0.796
-        },
-        {
-          "start": 18.52,
-          "end": 18.56,
-          "word": "to",
-          "score": 0.988
-        },
-        {
-          "start": 18.6,
-          "end": 18.72,
-          "word": "be",
-          "score": 0.696
-        },
-        {
-          "start": 18.82,
-          "end": 19.36,
-          "word": "cloudy",
-          "score": 0.882
-        },
-        {
-          "start": 19.72,
-          "end": 19.94,
-          "word": "while",
-          "score": 0.655
-        },
-        {
-          "start": 19.98,
-          "end": 20.4,
-          "word": "Friday",
-          "score": 0.762
-        },
-        {
-          "start": 20.44,
-          "end": 20.62,
-          "word": "will",
-          "score": 0.863
-        },
-        {
-          "start": 20.64,
-          "end": 20.72,
-          "word": "be",
-          "score": 0.917
-        },
-        {
-          "start": 20.88,
-          "end": 21.4,
-          "word": "mostly",
-          "score": 0.802
-        },
-        {
-          "start": 21.48,
-          "end": 21.84,
-          "word": "clear",
-          "score": 0.784
-        },
-        {
-          "start": 22.14,
-          "end": 22.3,
-          "word": "with",
-          "score": 0.839
-        },
-        {
-          "start": 22.36,
-          "end": 22.4,
-          "word": "a",
-          "score": 0.785
-        },
-        {
-          "start": 22.44,
-          "end": 22.66,
-          "word": "high",
-          "score": 0.902
-        },
-        {
-          "start": 22.7,
-          "end": 22.74,
-          "word": "of",
-          "score": 0.998
-        },
-        {
-          "start": 22.76,
-          "end": 23.48,
-          "word": "28",
-          "score": 0.418
-        },
-        {
-          "start": 23.56,
-          "end": 23.64,
-          "word": "and",
-          "score": 0.826
-        },
-        {
-          "start": 23.66,
-          "end": 23.68,
-          "word": "a",
-          "score": 0.028
-        },
-        {
-          "start": 23.84,
-          "end": 24.1,
-          "word": "low",
-          "score": 0.886
-        },
-        {
-          "start": 24.14,
-          "end": 24.22,
-          "word": "of",
-          "score": 0.667
-        },
-        {
-          "start": 24.34,
-          "end": 24.66,
-          "word": "both",
-          "score": 0.865
-        },
-        {
-          "start": 24.74,
-          "end": 25.16,
-          "word": "days.",
-          "score": 0.852
-        }
-      ],
-      "emotion": {
-        "label": "happy",
-        "score": 1.0,
-        "source": "emotion2vec"
-      },
-      "emotion_scores": {
-        "angry": 0.0,
-        "disgusted": 0.0,
-        "fearful": 0.0,
-        "happy": 1.0,
-        "neutral": 0.0,
-        "other": 0.0,
-        "sad": 0.0,
-        "surprised": 0.0
-      },
-      "prosody": {
-        "pitch_hz": 343.1,
-        "pitch_semitones": 2.18,
-        "energy_db": -27.35,
-        "energy_rel_db": -0.35,
-        "rate_wps": 3.99,
-        "rate_rel": 0.89,
-        "voiced_fraction": 0.935
-      },
-      "tags": [
-        {
-          "label": "pitch ↑",
-          "score": 1.0,
-          "source": "prosody"
-        }
-      ],
-      "sound_scores": {
-        "laughter": 0.008,
-        "whisper": 0.003,
-        "singing": 0.0,
-        "humming": 0.0,
-        "sigh": 0.006,
-        "crying": 0.001
-      }
-    },
-    {
-      "start": 26.24,
-      "end": 34.08,
-      "text": "In Mumbai, Thursday is going to be cloudy while Friday will be mostly clear with a high of 28 and a low of both days.",
-      "words": [
-        {
-          "start": 26.24,
-          "end": 26.32,
-          "word": "In",
-          "score": 0.35
-        },
-        {
-          "start": 26.36,
-          "end": 26.9,
-          "word": "Mumbai,",
-          "score": 0.842
-        },
-        {
-          "start": 27.42,
-          "end": 27.84,
-          "word": "Thursday",
-          "score": 0.857
-        },
-        {
-          "start": 27.88,
-          "end": 27.94,
-          "word": "is",
-          "score": 0.828
-        },
-        {
-          "start": 27.98,
-          "end": 28.1,
-          "word": "going",
-          "score": 0.893
-        },
-        {
-          "start": 28.12,
-          "end": 28.2,
-          "word": "to",
-          "score": 0.586
-        },
-        {
-          "start": 28.22,
-          "end": 28.32,
-          "word": "be",
-          "score": 0.74
-        },
-        {
-          "start": 28.38,
-          "end": 28.8,
-          "word": "cloudy",
-          "score": 0.857
-        },
-        {
-          "start": 29.22,
-          "end": 29.4,
-          "word": "while",
-          "score": 0.854
-        },
-        {
-          "start": 29.42,
-          "end": 29.8,
-          "word": "Friday",
-          "score": 0.735
-        },
-        {
-          "start": 29.84,
-          "end": 30.0,
-          "word": "will",
-          "score": 0.916
-        },
-        {
-          "start": 30.02,
-          "end": 30.1,
-          "word": "be",
-          "score": 0.518
-        },
-        {
-          "start": 30.18,
-          "end": 30.62,
-          "word": "mostly",
-          "score": 0.791
-        },
-        {
-          "start": 30.7,
-          "end": 31.0,
-          "word": "clear",
-          "score": 0.726
-        },
-        {
-          "start": 31.28,
-          "end": 31.4,
-          "word": "with",
-          "score": 0.876
-        },
-        {
-          "start": 31.42,
-          "end": 31.44,
-          "word": "a",
-          "score": 0.0
-        },
-        {
-          "start": 31.46,
-          "end": 31.76,
-          "word": "high",
-          "score": 0.483
-        },
-        {
-          "start": 31.8,
-          "end": 31.84,
-          "word": "of",
-          "score": 0.994
-        },
-        {
-          "start": 31.86,
-          "end": 32.58,
-          "word": "28",
-          "score": 0.374
-        },
-        {
-          "start": 32.64,
-          "end": 32.74,
-          "word": "and",
-          "score": 0.678
-        },
-        {
-          "start": 32.78,
-          "end": 32.82,
-          "word": "a",
-          "score": 0.72
-        },
-        {
-          "start": 32.9,
-          "end": 33.1,
-          "word": "low",
-          "score": 0.925
-        },
-        {
-          "start": 33.16,
-          "end": 33.24,
-          "word": "of",
-          "score": 0.892
-        },
-        {
-          "start": 33.34,
-          "end": 33.62,
-          "word": "both",
-          "score": 0.806
-        },
-        {
-          "start": 33.7,
-          "end": 34.08,
-          "word": "days.",
-          "score": 0.894
-        }
-      ],
-      "emotion": {
-        "label": "happy",
-        "score": 0.957,
-        "source": "emotion2vec"
-      },
-      "emotion_scores": {
-        "angry": 0.0,
-        "disgusted": 0.023,
-        "fearful": 0.001,
-        "happy": 0.957,
-        "neutral": 0.0,
-        "other": 0.001,
-        "sad": 0.001,
-        "surprised": 0.0
-      },
-      "prosody": {
-        "pitch_hz": null,
-        "pitch_semitones": null,
-        "energy_db": -28.22,
-        "energy_rel_db": -1.22,
-        "rate_wps": 4.39,
-        "rate_rel": 0.98,
-        "voiced_fraction": 0.0
-      },
-      "tags": [
-        {
-          "label": "whisper",
-          "score": 0.708,
-          "source": "audioset"
-        }
-      ],
-      "sound_scores": {
-        "laughter": 0.0,
-        "whisper": 0.708,
-        "singing": 0.001,
-        "humming": 0.0,
-        "sigh": 0.002,
-        "crying": 0.0
-      }
-    },
-    {
-      "start": 35.08,
-      "end": 42.09,
-      "text": "In Mumbai, Thursday is going to be cloudy while Friday will be mostly clear with a high of 28 and a low of both days.",
-      "words": [
-        {
-          "start": 35.08,
-          "end": 35.15,
-          "word": "In",
-          "score": 0.998
-        },
-        {
-          "start": 35.18,
-          "end": 35.71,
-          "word": "Mumbai,",
-          "score": 0.828
-        },
-        {
-          "start": 35.79,
-          "end": 36.25,
-          "word": "Thursday",
-          "score": 0.804
-        },
-        {
-          "start": 36.29,
-          "end": 36.35,
-          "word": "is",
-          "score": 0.702
-        },
-        {
-          "start": 36.39,
-          "end": 36.53,
-          "word": "going",
-          "score": 0.852
-        },
-        {
-          "start": 36.55,
-          "end": 36.61,
-          "word": "to",
-          "score": 0.846
-        },
-        {
-          "start": 36.63,
-          "end": 36.73,
-          "word": "be",
-          "score": 0.618
-        },
-        {
-          "start": 36.79,
-          "end": 37.21,
-          "word": "cloudy",
-          "score": 0.818
-        },
-        {
-          "start": 37.65,
-          "end": 37.83,
-          "word": "while",
-          "score": 0.797
-        },
-        {
-          "start": 37.87,
-          "end": 38.23,
-          "word": "Friday",
-          "score": 0.754
-        },
-        {
-          "start": 38.27,
-          "end": 38.41,
-          "word": "will",
-          "score": 0.991
-        },
-        {
-          "start": 38.45,
-          "end": 38.51,
-          "word": "be",
-          "score": 0.768
-        },
-        {
-          "start": 38.55,
-          "end": 38.95,
-          "word": "mostly",
-          "score": 0.777
-        },
-        {
-          "start": 39.01,
-          "end": 39.31,
-          "word": "clear",
-          "score": 0.797
-        },
-        {
-          "start": 39.43,
-          "end": 39.57,
-          "word": "with",
-          "score": 0.855
-        },
-        {
-          "start": 39.65,
-          "end": 39.69,
-          "word": "a",
-          "score": 0.366
-        },
-        {
-          "start": 39.73,
-          "end": 39.97,
-          "word": "high",
-          "score": 0.794
-        },
-        {
-          "start": 39.99,
-          "end": 40.03,
-          "word": "of",
-          "score": 0.998
-        },
-        {
-          "start": 40.05,
-          "end": 40.43,
-          "word": "28",
-          "score": 0.569
-        },
-        {
-          "start": 40.85,
-          "end": 40.93,
-          "word": "and",
-          "score": 0.832
-        },
-        {
-          "start": 40.97,
-          "end": 40.99,
-          "word": "a",
-          "score": 0.977
-        },
-        {
-          "start": 41.07,
-          "end": 41.29,
-          "word": "low",
-          "score": 0.919
-        },
-        {
-          "start": 41.33,
-          "end": 41.39,
-          "word": "of",
-          "score": 0.75
-        },
-        {
-          "start": 41.49,
-          "end": 41.73,
-          "word": "both",
-          "score": 0.942
-        },
-        {
-          "start": 41.79,
-          "end": 42.09,
-          "word": "days.",
-          "score": 0.972
-        }
-      ],
-      "emotion": {
-        "label": "sad",
-        "score": 0.882,
-        "source": "emotion2vec"
-      },
-      "emotion_scores": {
-        "angry": 0.0,
-        "disgusted": 0.0,
-        "fearful": 0.0,
-        "happy": 0.004,
-        "neutral": 0.113,
-        "other": 0.0,
-        "sad": 0.882,
-        "surprised": 0.0
-      },
-      "prosody": {
-        "pitch_hz": 223.7,
-        "pitch_semitones": -5.23,
-        "energy_db": -27.0,
-        "energy_rel_db": 0.0,
-        "rate_wps": 4.91,
-        "rate_rel": 1.1,
-        "voiced_fraction": 0.835
-      },
-      "tags": [
-        {
-          "label": "pitch ↓",
-          "score": 1.0,
-          "source": "prosody"
-        }
-      ],
-      "sound_scores": {
-        "laughter": 0.002,
-        "whisper": 0.001,
-        "singing": 0.0,
-        "humming": 0.0,
-        "sigh": 0.001,
-        "crying": 0.0
-      }
-    }
+ "read": {
+  "source": [
+   "ex04_default_00008",
+   "ex04_happy_00008",
+   "ex04_laughing_00008",
+   "ex04_whisper_00008",
+   "ex04_sad_00008",
+   "ex04_confused_00008"
   ],
-  "events": [
+  "result": {
+   "language": "en",
+   "duration": 54.95,
+   "segments": [
     {
-      "start": 6.85,
-      "end": 7.75,
-      "type": "pause",
-      "score": null
+     "start": 0.21,
+     "end": 6.85,
+     "text": "In Mumbai, Thursday is going to be cloudy while Friday will be mostly clear with a high of 28 and a low of both days.",
+     "words": [
+      {
+       "start": 0.21,
+       "end": 0.29,
+       "word": "In",
+       "score": 0.873
+      },
+      {
+       "start": 0.31,
+       "end": 0.81,
+       "word": "Mumbai,",
+       "score": 0.902
+      },
+      {
+       "start": 1.01,
+       "end": 1.41,
+       "word": "Thursday",
+       "score": 0.842
+      },
+      {
+       "start": 1.47,
+       "end": 1.51,
+       "word": "is",
+       "score": 0.998
+      },
+      {
+       "start": 1.53,
+       "end": 1.67,
+       "word": "going",
+       "score": 0.777
+      },
+      {
+       "start": 1.69,
+       "end": 1.73,
+       "word": "to",
+       "score": 0.988
+      },
+      {
+       "start": 1.77,
+       "end": 1.85,
+       "word": "be",
+       "score": 0.778
+      },
+      {
+       "start": 1.91,
+       "end": 2.29,
+       "word": "cloudy",
+       "score": 0.906
+      },
+      {
+       "start": 2.39,
+       "end": 2.61,
+       "word": "while",
+       "score": 0.794
+      },
+      {
+       "start": 2.65,
+       "end": 3.07,
+       "word": "Friday",
+       "score": 0.781
+      },
+      {
+       "start": 3.11,
+       "end": 3.25,
+       "word": "will",
+       "score": 0.997
+      },
+      {
+       "start": 3.27,
+       "end": 3.35,
+       "word": "be",
+       "score": 0.544
+      },
+      {
+       "start": 3.47,
+       "end": 3.87,
+       "word": "mostly",
+       "score": 0.857
+      },
+      {
+       "start": 3.93,
+       "end": 4.23,
+       "word": "clear",
+       "score": 0.738
+      },
+      {
+       "start": 4.29,
+       "end": 4.41,
+       "word": "with",
+       "score": 0.919
+      },
+      {
+       "start": 4.49,
+       "end": 4.53,
+       "word": "a",
+       "score": 0.203
+      },
+      {
+       "start": 4.55,
+       "end": 4.75,
+       "word": "high",
+       "score": 0.894
+      },
+      {
+       "start": 4.77,
+       "end": 4.81,
+       "word": "of",
+       "score": 0.999
+      },
+      {
+       "start": 4.83,
+       "end": 5.37,
+       "word": "28",
+       "score": 0.409
+      },
+      {
+       "start": 5.47,
+       "end": 5.57,
+       "word": "and",
+       "score": 0.781
+      },
+      {
+       "start": 5.61,
+       "end": 5.63,
+       "word": "a",
+       "score": 0.967
+      },
+      {
+       "start": 5.73,
+       "end": 6.01,
+       "word": "low",
+       "score": 0.901
+      },
+      {
+       "start": 6.07,
+       "end": 6.15,
+       "word": "of",
+       "score": 0.666
+      },
+      {
+       "start": 6.23,
+       "end": 6.49,
+       "word": "both",
+       "score": 0.875
+      },
+      {
+       "start": 6.55,
+       "end": 6.85,
+       "word": "days.",
+       "score": 0.824
+      }
+     ],
+     "expression": {
+      "label": "happy",
+      "score": 0.576,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.007,
+      "angry": 0.244,
+      "anxious": 0.003,
+      "bored": 0.0,
+      "confused": 0.013,
+      "disgusted": 0.001,
+      "happy": 0.576,
+      "neutral": 0.154,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "emotion": {
+      "label": "happy",
+      "score": 1.0,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.0,
+      "fearful": 0.0,
+      "happy": 1.0,
+      "neutral": 0.0,
+      "other": 0.0,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.635,
+      "dominance": 0.684,
+      "valence": 0.587
+     },
+     "prosody": {
+      "pitch_hz": 286.8,
+      "pitch_semitones": 0.0,
+      "energy_db": -25.59,
+      "energy_rel_db": 1.6,
+      "rate_wps": 4.74,
+      "rate_rel": 1.05,
+      "voiced_fraction": 0.911,
+      "pitch_range_st": 4.42
+     },
+     "tags": [
+      {
+       "label": "high energy",
+       "score": 0.635,
+       "source": "arousal"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.002,
+      "whisper": 0.0,
+      "singing": 0.0,
+      "humming": 0.0,
+      "sigh": 0.0,
+      "crying": 0.0
+     }
     },
     {
-      "start": 14.9,
-      "end": 16.92,
-      "type": "pause",
-      "score": null
+     "start": 7.75,
+     "end": 14.9,
+     "text": "In Mumbai, Thursday is going to be cloudy while Friday will be mostly clear with a high of 28 and a low of both days.",
+     "words": [
+      {
+       "start": 7.75,
+       "end": 7.83,
+       "word": "In",
+       "score": 0.937
+      },
+      {
+       "start": 7.85,
+       "end": 8.39,
+       "word": "Mumbai,",
+       "score": 0.862
+      },
+      {
+       "start": 8.63,
+       "end": 9.07,
+       "word": "Thursday",
+       "score": 0.725
+      },
+      {
+       "start": 9.11,
+       "end": 9.17,
+       "word": "is",
+       "score": 0.796
+      },
+      {
+       "start": 9.19,
+       "end": 9.31,
+       "word": "going",
+       "score": 0.889
+      },
+      {
+       "start": 9.33,
+       "end": 9.37,
+       "word": "to",
+       "score": 0.994
+      },
+      {
+       "start": 9.41,
+       "end": 9.49,
+       "word": "be",
+       "score": 0.974
+      },
+      {
+       "start": 9.57,
+       "end": 9.99,
+       "word": "cloudy",
+       "score": 0.86
+      },
+      {
+       "start": 10.23,
+       "end": 10.43,
+       "word": "while",
+       "score": 0.874
+      },
+      {
+       "start": 10.49,
+       "end": 10.89,
+       "word": "Friday",
+       "score": 0.668
+      },
+      {
+       "start": 10.93,
+       "end": 11.09,
+       "word": "will",
+       "score": 0.75
+      },
+      {
+       "start": 11.11,
+       "end": 11.17,
+       "word": "be",
+       "score": 0.865
+      },
+      {
+       "start": 11.25,
+       "end": 11.7,
+       "word": "mostly",
+       "score": 0.789
+      },
+      {
+       "start": 11.78,
+       "end": 12.08,
+       "word": "clear",
+       "score": 0.729
+      },
+      {
+       "start": 12.14,
+       "end": 12.3,
+       "word": "with",
+       "score": 0.801
+      },
+      {
+       "start": 12.36,
+       "end": 12.4,
+       "word": "a",
+       "score": 0.496
+      },
+      {
+       "start": 12.44,
+       "end": 12.66,
+       "word": "high",
+       "score": 0.769
+      },
+      {
+       "start": 12.68,
+       "end": 12.74,
+       "word": "of",
+       "score": 0.748
+      },
+      {
+       "start": 12.76,
+       "end": 13.38,
+       "word": "28",
+       "score": 0.401
+      },
+      {
+       "start": 13.46,
+       "end": 13.54,
+       "word": "and",
+       "score": 0.797
+      },
+      {
+       "start": 13.58,
+       "end": 13.6,
+       "word": "a",
+       "score": 0.964
+      },
+      {
+       "start": 13.7,
+       "end": 13.98,
+       "word": "low",
+       "score": 0.893
+      },
+      {
+       "start": 14.02,
+       "end": 14.08,
+       "word": "of",
+       "score": 0.75
+      },
+      {
+       "start": 14.2,
+       "end": 14.46,
+       "word": "both",
+       "score": 0.91
+      },
+      {
+       "start": 14.52,
+       "end": 14.9,
+       "word": "days.",
+       "score": 0.889
+      }
+     ],
+     "expression": {
+      "label": "happy",
+      "score": 0.855,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.002,
+      "angry": 0.135,
+      "anxious": 0.0,
+      "bored": 0.0,
+      "confused": 0.0,
+      "disgusted": 0.0,
+      "happy": 0.855,
+      "neutral": 0.008,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "emotion": {
+      "label": "happy",
+      "score": 1.0,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.0,
+      "fearful": 0.0,
+      "happy": 1.0,
+      "neutral": 0.0,
+      "other": 0.0,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.736,
+      "dominance": 0.742,
+      "valence": 0.551
+     },
+     "prosody": {
+      "pitch_hz": 318.3,
+      "pitch_semitones": 1.8,
+      "energy_db": -26.68,
+      "energy_rel_db": 0.51,
+      "rate_wps": 4.48,
+      "rate_rel": 0.99,
+      "voiced_fraction": 0.86,
+      "pitch_range_st": 4.08
+     },
+     "tags": [
+      {
+       "label": "high energy",
+       "score": 0.736,
+       "source": "arousal"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.001,
+      "whisper": 0.0,
+      "singing": 0.0,
+      "humming": 0.0,
+      "sigh": 0.001,
+      "crying": 0.0
+     }
     },
     {
-      "start": 25.16,
-      "end": 26.24,
-      "type": "pause",
-      "score": null
+     "start": 16.92,
+     "end": 25.16,
+     "text": "In Mumbai, Thursday is going to be cloudy while Friday will be mostly clear with a high of 28 and a low of both days.",
+     "words": [
+      {
+       "start": 16.92,
+       "end": 17.04,
+       "word": "In",
+       "score": 0.896
+      },
+      {
+       "start": 17.08,
+       "end": 17.6,
+       "word": "Mumbai,",
+       "score": 0.896
+      },
+      {
+       "start": 17.66,
+       "end": 18.16,
+       "word": "Thursday",
+       "score": 0.838
+      },
+      {
+       "start": 18.24,
+       "end": 18.3,
+       "word": "is",
+       "score": 0.756
+      },
+      {
+       "start": 18.34,
+       "end": 18.5,
+       "word": "going",
+       "score": 0.796
+      },
+      {
+       "start": 18.52,
+       "end": 18.56,
+       "word": "to",
+       "score": 0.988
+      },
+      {
+       "start": 18.6,
+       "end": 18.72,
+       "word": "be",
+       "score": 0.696
+      },
+      {
+       "start": 18.82,
+       "end": 19.36,
+       "word": "cloudy",
+       "score": 0.882
+      },
+      {
+       "start": 19.72,
+       "end": 19.94,
+       "word": "while",
+       "score": 0.655
+      },
+      {
+       "start": 19.98,
+       "end": 20.4,
+       "word": "Friday",
+       "score": 0.762
+      },
+      {
+       "start": 20.44,
+       "end": 20.62,
+       "word": "will",
+       "score": 0.863
+      },
+      {
+       "start": 20.64,
+       "end": 20.72,
+       "word": "be",
+       "score": 0.917
+      },
+      {
+       "start": 20.88,
+       "end": 21.4,
+       "word": "mostly",
+       "score": 0.802
+      },
+      {
+       "start": 21.48,
+       "end": 21.84,
+       "word": "clear",
+       "score": 0.784
+      },
+      {
+       "start": 22.14,
+       "end": 22.3,
+       "word": "with",
+       "score": 0.839
+      },
+      {
+       "start": 22.36,
+       "end": 22.4,
+       "word": "a",
+       "score": 0.785
+      },
+      {
+       "start": 22.44,
+       "end": 22.66,
+       "word": "high",
+       "score": 0.902
+      },
+      {
+       "start": 22.7,
+       "end": 22.74,
+       "word": "of",
+       "score": 0.998
+      },
+      {
+       "start": 22.76,
+       "end": 23.48,
+       "word": "28",
+       "score": 0.418
+      },
+      {
+       "start": 23.56,
+       "end": 23.64,
+       "word": "and",
+       "score": 0.826
+      },
+      {
+       "start": 23.66,
+       "end": 23.68,
+       "word": "a",
+       "score": 0.028
+      },
+      {
+       "start": 23.84,
+       "end": 24.1,
+       "word": "low",
+       "score": 0.886
+      },
+      {
+       "start": 24.14,
+       "end": 24.22,
+       "word": "of",
+       "score": 0.667
+      },
+      {
+       "start": 24.34,
+       "end": 24.66,
+       "word": "both",
+       "score": 0.865
+      },
+      {
+       "start": 24.74,
+       "end": 25.16,
+       "word": "days.",
+       "score": 0.852
+      }
+     ],
+     "expression": {
+      "label": "amused",
+      "score": 0.823,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.823,
+      "angry": 0.003,
+      "anxious": 0.0,
+      "bored": 0.0,
+      "confused": 0.0,
+      "disgusted": 0.0,
+      "happy": 0.173,
+      "neutral": 0.0,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "emotion": {
+      "label": "happy",
+      "score": 1.0,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.0,
+      "fearful": 0.0,
+      "happy": 1.0,
+      "neutral": 0.0,
+      "other": 0.0,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.749,
+      "dominance": 0.729,
+      "valence": 0.719
+     },
+     "prosody": {
+      "pitch_hz": 343.1,
+      "pitch_semitones": 3.1,
+      "energy_db": -27.35,
+      "energy_rel_db": -0.16,
+      "rate_wps": 3.99,
+      "rate_rel": 0.88,
+      "voiced_fraction": 0.935,
+      "pitch_range_st": 3.43
+     },
+     "tags": [
+      {
+       "label": "high energy",
+       "score": 0.749,
+       "source": "arousal"
+      },
+      {
+       "label": "pitch ↑",
+       "score": 1.0,
+       "source": "prosody"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.008,
+      "whisper": 0.003,
+      "singing": 0.0,
+      "humming": 0.0,
+      "sigh": 0.006,
+      "crying": 0.001
+     }
     },
     {
-      "start": 34.08,
-      "end": 35.08,
-      "type": "pause",
-      "score": null
+     "start": 26.22,
+     "end": 34.08,
+     "text": "In Mumbai, Thursday is going to be cloudy, while Friday will be mostly clear with a high of 28 and a low of both days.",
+     "words": [
+      {
+       "start": 26.22,
+       "end": 26.32,
+       "word": "In",
+       "score": 0.59
+      },
+      {
+       "start": 26.36,
+       "end": 26.92,
+       "word": "Mumbai,",
+       "score": 0.778
+      },
+      {
+       "start": 27.42,
+       "end": 27.84,
+       "word": "Thursday",
+       "score": 0.839
+      },
+      {
+       "start": 27.88,
+       "end": 27.94,
+       "word": "is",
+       "score": 0.754
+      },
+      {
+       "start": 27.98,
+       "end": 28.1,
+       "word": "going",
+       "score": 0.853
+      },
+      {
+       "start": 28.12,
+       "end": 28.2,
+       "word": "to",
+       "score": 0.89
+      },
+      {
+       "start": 28.22,
+       "end": 28.3,
+       "word": "be",
+       "score": 0.988
+      },
+      {
+       "start": 28.38,
+       "end": 28.8,
+       "word": "cloudy,",
+       "score": 0.935
+      },
+      {
+       "start": 29.22,
+       "end": 29.4,
+       "word": "while",
+       "score": 0.878
+      },
+      {
+       "start": 29.42,
+       "end": 29.8,
+       "word": "Friday",
+       "score": 0.733
+      },
+      {
+       "start": 29.86,
+       "end": 30.0,
+       "word": "will",
+       "score": 0.983
+      },
+      {
+       "start": 30.02,
+       "end": 30.1,
+       "word": "be",
+       "score": 0.754
+      },
+      {
+       "start": 30.18,
+       "end": 30.62,
+       "word": "mostly",
+       "score": 0.726
+      },
+      {
+       "start": 30.7,
+       "end": 31.0,
+       "word": "clear",
+       "score": 0.756
+      },
+      {
+       "start": 31.28,
+       "end": 31.44,
+       "word": "with",
+       "score": 0.817
+      },
+      {
+       "start": 31.46,
+       "end": 31.48,
+       "word": "a",
+       "score": 0.452
+      },
+      {
+       "start": 31.54,
+       "end": 31.76,
+       "word": "high",
+       "score": 0.659
+      },
+      {
+       "start": 31.8,
+       "end": 31.84,
+       "word": "of",
+       "score": 0.981
+      },
+      {
+       "start": 31.86,
+       "end": 31.9,
+       "word": "28",
+       "score": 0.999
+      },
+      {
+       "start": 32.06,
+       "end": 32.58,
+       "word": "and",
+       "score": 0.342
+      },
+      {
+       "start": 32.64,
+       "end": 32.74,
+       "word": "a",
+       "score": 0.319
+      },
+      {
+       "start": 32.9,
+       "end": 33.08,
+       "word": "low",
+       "score": 0.592
+      },
+      {
+       "start": 33.1,
+       "end": 33.26,
+       "word": "of",
+       "score": 0.629
+      },
+      {
+       "start": 33.34,
+       "end": 33.6,
+       "word": "both",
+       "score": 0.834
+      },
+      {
+       "start": 33.7,
+       "end": 34.08,
+       "word": "days.",
+       "score": 0.759
+      }
+     ],
+     "expression": {
+      "label": "neutral",
+      "score": 0.564,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.0,
+      "angry": 0.0,
+      "anxious": 0.0,
+      "bored": 0.0,
+      "confused": 0.0,
+      "disgusted": 0.0,
+      "happy": 0.001,
+      "neutral": 0.564,
+      "sad": 0.0,
+      "surprised": 0.435
+     },
+     "emotion": {
+      "label": "happy",
+      "score": 0.949,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.028,
+      "fearful": 0.001,
+      "happy": 0.949,
+      "neutral": 0.0,
+      "other": 0.001,
+      "sad": 0.001,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.568,
+      "dominance": 0.632,
+      "valence": 0.516
+     },
+     "prosody": {
+      "pitch_hz": null,
+      "pitch_semitones": null,
+      "energy_db": -28.21,
+      "energy_rel_db": -1.02,
+      "rate_wps": 4.55,
+      "rate_rel": 1.01,
+      "voiced_fraction": 0.0,
+      "pitch_range_st": null
+     },
+     "tags": [
+      {
+       "label": "whisper",
+       "score": 0.805,
+       "source": "audioset"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.0,
+      "whisper": 0.805,
+      "singing": 0.002,
+      "humming": 0.0,
+      "sigh": 0.003,
+      "crying": 0.0
+     }
+    },
+    {
+     "start": 35.08,
+     "end": 42.1,
+     "text": "In Mumbai, Thursday is going to be cloudy, while Friday will be mostly clear with a high of 28 and a low of both days.",
+     "words": [
+      {
+       "start": 35.08,
+       "end": 35.16,
+       "word": "In",
+       "score": 0.879
+      },
+      {
+       "start": 35.18,
+       "end": 35.7,
+       "word": "Mumbai,",
+       "score": 0.782
+      },
+      {
+       "start": 35.78,
+       "end": 36.24,
+       "word": "Thursday",
+       "score": 0.764
+      },
+      {
+       "start": 36.28,
+       "end": 36.34,
+       "word": "is",
+       "score": 0.758
+      },
+      {
+       "start": 36.38,
+       "end": 36.52,
+       "word": "going",
+       "score": 0.741
+      },
+      {
+       "start": 36.54,
+       "end": 36.6,
+       "word": "to",
+       "score": 0.906
+      },
+      {
+       "start": 36.62,
+       "end": 36.72,
+       "word": "be",
+       "score": 0.736
+      },
+      {
+       "start": 36.78,
+       "end": 37.2,
+       "word": "cloudy,",
+       "score": 0.876
+      },
+      {
+       "start": 37.64,
+       "end": 37.82,
+       "word": "while",
+       "score": 0.843
+      },
+      {
+       "start": 37.86,
+       "end": 38.22,
+       "word": "Friday",
+       "score": 0.677
+      },
+      {
+       "start": 38.26,
+       "end": 38.4,
+       "word": "will",
+       "score": 0.962
+      },
+      {
+       "start": 38.44,
+       "end": 38.5,
+       "word": "be",
+       "score": 0.863
+      },
+      {
+       "start": 38.54,
+       "end": 38.94,
+       "word": "mostly",
+       "score": 0.817
+      },
+      {
+       "start": 39.02,
+       "end": 39.3,
+       "word": "clear",
+       "score": 0.754
+      },
+      {
+       "start": 39.42,
+       "end": 39.56,
+       "word": "with",
+       "score": 0.847
+      },
+      {
+       "start": 39.66,
+       "end": 39.68,
+       "word": "a",
+       "score": 0.5
+      },
+      {
+       "start": 39.74,
+       "end": 39.96,
+       "word": "high",
+       "score": 0.879
+      },
+      {
+       "start": 39.98,
+       "end": 40.02,
+       "word": "of",
+       "score": 0.996
+      },
+      {
+       "start": 40.04,
+       "end": 40.7,
+       "word": "28",
+       "score": 0.498
+      },
+      {
+       "start": 40.84,
+       "end": 40.94,
+       "word": "and",
+       "score": 0.76
+      },
+      {
+       "start": 40.98,
+       "end": 41.0,
+       "word": "a",
+       "score": 0.931
+      },
+      {
+       "start": 41.06,
+       "end": 41.28,
+       "word": "low",
+       "score": 0.905
+      },
+      {
+       "start": 41.32,
+       "end": 41.38,
+       "word": "of",
+       "score": 0.765
+      },
+      {
+       "start": 41.48,
+       "end": 41.72,
+       "word": "both",
+       "score": 0.937
+      },
+      {
+       "start": 41.78,
+       "end": 42.1,
+       "word": "days.",
+       "score": 0.795
+      }
+     ],
+     "expression": {
+      "label": "sad",
+      "score": 0.462,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.018,
+      "angry": 0.03,
+      "anxious": 0.171,
+      "bored": 0.057,
+      "confused": 0.009,
+      "disgusted": 0.012,
+      "happy": 0.06,
+      "neutral": 0.168,
+      "sad": 0.462,
+      "surprised": 0.013
+     },
+     "emotion": {
+      "label": "sad",
+      "score": 0.882,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.0,
+      "fearful": 0.0,
+      "happy": 0.004,
+      "neutral": 0.114,
+      "other": 0.0,
+      "sad": 0.882,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.444,
+      "dominance": 0.52,
+      "valence": 0.509
+     },
+     "prosody": {
+      "pitch_hz": 223.7,
+      "pitch_semitones": -4.3,
+      "energy_db": -27.02,
+      "energy_rel_db": 0.17,
+      "rate_wps": 4.66,
+      "rate_rel": 1.03,
+      "voiced_fraction": 0.838,
+      "pitch_range_st": 1.89
+     },
+     "tags": [
+      {
+       "label": "pitch ↓",
+       "score": 1.0,
+       "source": "prosody"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.002,
+      "whisper": 0.001,
+      "singing": 0.0,
+      "humming": 0.0,
+      "sigh": 0.001,
+      "crying": 0.0
+     }
+    },
+    {
+     "start": 43.3,
+     "end": 54.1,
+     "text": "In Mumbai, Thursday is going to be cloudy, while Friday will be mostly clear with a high of 28 and a low of both days.",
+     "words": [
+      {
+       "start": 43.3,
+       "end": 43.48,
+       "word": "In",
+       "score": 0.605
+      },
+      {
+       "start": 43.52,
+       "end": 44.16,
+       "word": "Mumbai,",
+       "score": 0.857
+      },
+      {
+       "start": 44.48,
+       "end": 45.02,
+       "word": "Thursday",
+       "score": 0.86
+      },
+      {
+       "start": 45.08,
+       "end": 45.14,
+       "word": "is",
+       "score": 0.446
+      },
+      {
+       "start": 45.2,
+       "end": 45.4,
+       "word": "going",
+       "score": 0.763
+      },
+      {
+       "start": 45.42,
+       "end": 45.5,
+       "word": "to",
+       "score": 0.966
+      },
+      {
+       "start": 45.54,
+       "end": 45.66,
+       "word": "be",
+       "score": 0.942
+      },
+      {
+       "start": 45.94,
+       "end": 46.5,
+       "word": "cloudy,",
+       "score": 0.918
+      },
+      {
+       "start": 46.62,
+       "end": 46.9,
+       "word": "while",
+       "score": 0.799
+      },
+      {
+       "start": 47.04,
+       "end": 47.52,
+       "word": "Friday",
+       "score": 0.726
+      },
+      {
+       "start": 47.56,
+       "end": 47.76,
+       "word": "will",
+       "score": 0.838
+      },
+      {
+       "start": 47.78,
+       "end": 47.9,
+       "word": "be",
+       "score": 0.74
+      },
+      {
+       "start": 48.18,
+       "end": 48.66,
+       "word": "mostly",
+       "score": 0.8
+      },
+      {
+       "start": 48.74,
+       "end": 49.04,
+       "word": "clear",
+       "score": 0.735
+      },
+      {
+       "start": 49.1,
+       "end": 49.26,
+       "word": "with",
+       "score": 0.821
+      },
+      {
+       "start": 49.34,
+       "end": 49.4,
+       "word": "a",
+       "score": 0.619
+      },
+      {
+       "start": 49.44,
+       "end": 49.72,
+       "word": "high",
+       "score": 0.761
+      },
+      {
+       "start": 49.76,
+       "end": 49.82,
+       "word": "of",
+       "score": 0.747
+      },
+      {
+       "start": 50.26,
+       "end": 50.5,
+       "word": "28",
+       "score": 0.844
+      },
+      {
+       "start": 51.28,
+       "end": 51.48,
+       "word": "and",
+       "score": 0.594
+      },
+      {
+       "start": 51.5,
+       "end": 51.52,
+       "word": "a",
+       "score": 0.0
+      },
+      {
+       "start": 51.96,
+       "end": 52.34,
+       "word": "low",
+       "score": 0.786
+      },
+      {
+       "start": 52.62,
+       "end": 52.74,
+       "word": "of",
+       "score": 0.804
+      },
+      {
+       "start": 53.04,
+       "end": 53.4,
+       "word": "both",
+       "score": 0.885
+      },
+      {
+       "start": 53.7,
+       "end": 54.1,
+       "word": "days.",
+       "score": 0.914
+      }
+     ],
+     "expression": {
+      "label": "confused",
+      "score": 0.943,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.007,
+      "angry": 0.004,
+      "anxious": 0.001,
+      "bored": 0.008,
+      "confused": 0.943,
+      "disgusted": 0.005,
+      "happy": 0.016,
+      "neutral": 0.01,
+      "sad": 0.006,
+      "surprised": 0.001
+     },
+     "emotion": {
+      "label": "happy",
+      "score": 0.33,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.001,
+      "disgusted": 0.305,
+      "fearful": 0.005,
+      "happy": 0.33,
+      "neutral": 0.046,
+      "other": 0.047,
+      "sad": 0.027,
+      "surprised": 0.001
+     },
+     "voice": {
+      "arousal": 0.452,
+      "dominance": 0.529,
+      "valence": 0.517
+     },
+     "prosody": {
+      "pitch_hz": 237.0,
+      "pitch_semitones": -3.3,
+      "energy_db": -31.75,
+      "energy_rel_db": -4.56,
+      "rate_wps": 3.82,
+      "rate_rel": 0.85,
+      "voiced_fraction": 0.836,
+      "pitch_range_st": 3.64
+     },
+     "tags": [
+      {
+       "label": "pitch ↓",
+       "score": 1.0,
+       "source": "prosody"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.001,
+      "whisper": 0.003,
+      "singing": 0.001,
+      "humming": 0.0,
+      "sigh": 0.057,
+      "crying": 0.0
+     }
     }
-  ],
-  "models": {
+   ],
+   "events": [
+    {
+     "start": 6.85,
+     "end": 7.75,
+     "type": "pause",
+     "score": null
+    },
+    {
+     "start": 14.9,
+     "end": 16.92,
+     "type": "pause",
+     "score": null
+    },
+    {
+     "start": 25.16,
+     "end": 26.22,
+     "type": "pause",
+     "score": null
+    },
+    {
+     "start": 34.08,
+     "end": 35.08,
+     "type": "pause",
+     "score": null
+    },
+    {
+     "start": 42.1,
+     "end": 43.3,
+     "type": "pause",
+     "score": null
+    },
+    {
+     "start": 50.5,
+     "end": 51.28,
+     "type": "pause",
+     "score": null
+    }
+   ],
+   "models": {
     "asr": "whisperx/large-v3-turbo",
     "emotion": "emotion2vec/emotion2vec_plus_large",
+    "voice": "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
     "sounds": "MIT/ast-finetuned-audioset-10-10-0.4593"
+   }
   }
+ },
+ "conversation": {
+  "source": [
+   "ex04-ex02_awe_001_ex04 22.1-25.1s (awe)",
+   "ex04-ex02_happy_001_ex04 20.8-24.3s (happy)",
+   "ex04-ex01_sad-sympathetic_001_ex04 39.6-43.2s (sad)",
+   "ex04-ex02_angry_001_ex04 31.2-35.2s (angry)",
+   "ex04-ex02_bored_001_ex04 32.0-36.6s (bored)",
+   "ex04-ex03_default_001_ex04 30.3-36.5s (default)"
+  ],
+  "result": {
+   "language": "en",
+   "duration": 31.98,
+   "segments": [
+    {
+     "start": 0.29,
+     "end": 3.21,
+     "text": "I don't think I could have imagined anything quite like this.",
+     "words": [
+      {
+       "start": 0.29,
+       "end": 0.33,
+       "word": "I",
+       "score": 0.946
+      },
+      {
+       "start": 0.39,
+       "end": 0.55,
+       "word": "don't",
+       "score": 0.801
+      },
+      {
+       "start": 0.57,
+       "end": 0.71,
+       "word": "think",
+       "score": 0.9
+      },
+      {
+       "start": 0.75,
+       "end": 0.79,
+       "word": "I",
+       "score": 0.994
+      },
+      {
+       "start": 0.83,
+       "end": 0.97,
+       "word": "could",
+       "score": 0.893
+      },
+      {
+       "start": 0.99,
+       "end": 1.11,
+       "word": "have",
+       "score": 0.844
+      },
+      {
+       "start": 1.21,
+       "end": 1.75,
+       "word": "imagined",
+       "score": 0.73
+      },
+      {
+       "start": 1.97,
+       "end": 2.31,
+       "word": "anything",
+       "score": 0.821
+      },
+      {
+       "start": 2.41,
+       "end": 2.63,
+       "word": "quite",
+       "score": 0.922
+      },
+      {
+       "start": 2.69,
+       "end": 2.87,
+       "word": "like",
+       "score": 0.758
+      },
+      {
+       "start": 2.93,
+       "end": 3.21,
+       "word": "this.",
+       "score": 0.919
+      }
+     ],
+     "expression": {
+      "label": "surprised",
+      "score": 0.817,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.002,
+      "angry": 0.003,
+      "anxious": 0.039,
+      "bored": 0.009,
+      "confused": 0.007,
+      "disgusted": 0.063,
+      "happy": 0.003,
+      "neutral": 0.012,
+      "sad": 0.045,
+      "surprised": 0.817
+     },
+     "emotion": {
+      "label": "sad",
+      "score": 0.31,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.011,
+      "fearful": 0.003,
+      "happy": 0.005,
+      "neutral": 0.008,
+      "other": 0.004,
+      "sad": 0.31,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.439,
+      "dominance": 0.503,
+      "valence": 0.302
+     },
+     "prosody": {
+      "pitch_hz": 201.6,
+      "pitch_semitones": -5.01,
+      "energy_db": -28.58,
+      "energy_rel_db": 2.08,
+      "rate_wps": 4.95,
+      "rate_rel": 1.01,
+      "voiced_fraction": 0.753,
+      "pitch_range_st": 1.5
+     },
+     "tags": [
+      {
+       "label": "pitch ↓",
+       "score": 1.0,
+       "source": "prosody"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.007,
+      "whisper": 0.002,
+      "singing": 0.0,
+      "humming": 0.0,
+      "sigh": 0.016,
+      "crying": 0.0
+     }
+    },
+    {
+     "start": 3.33,
+     "end": 5.6,
+     "text": "It's... Let's go to the",
+     "words": [
+      {
+       "start": 3.33,
+       "end": 3.51,
+       "word": "It's...",
+       "score": 0.578
+      },
+      {
+       "start": 4.43,
+       "end": 4.68,
+       "word": "Let's",
+       "score": 0.743
+      },
+      {
+       "start": 4.72,
+       "end": 4.96,
+       "word": "go",
+       "score": 0.8
+      },
+      {
+       "start": 4.98,
+       "end": 5.02,
+       "word": "to",
+       "score": 0.001
+      },
+      {
+       "start": 5.24,
+       "end": 5.6,
+       "word": "the",
+       "score": 0.239
+      }
+     ],
+     "expression": {
+      "label": "happy",
+      "score": 0.551,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.004,
+      "angry": 0.035,
+      "anxious": 0.008,
+      "bored": 0.0,
+      "confused": 0.021,
+      "disgusted": 0.365,
+      "happy": 0.551,
+      "neutral": 0.01,
+      "sad": 0.005,
+      "surprised": 0.001
+     },
+     "emotion": {
+      "label": "neutral",
+      "score": 0.993,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.0,
+      "fearful": 0.0,
+      "happy": 0.0,
+      "neutral": 0.993,
+      "other": 0.0,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.604,
+      "dominance": 0.616,
+      "valence": 0.613
+     },
+     "prosody": {
+      "pitch_hz": 415.1,
+      "pitch_semitones": 7.5,
+      "energy_db": -32.27,
+      "energy_rel_db": -1.61,
+      "rate_wps": 4.63,
+      "rate_rel": 0.95,
+      "voiced_fraction": 0.736,
+      "pitch_range_st": 2.89
+     },
+     "tags": [
+      {
+       "label": "high energy",
+       "score": 0.604,
+       "source": "arousal"
+      },
+      {
+       "label": "pitch ↑",
+       "score": 1.0,
+       "source": "prosody"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.003,
+      "whisper": 0.001,
+      "singing": 0.001,
+      "humming": 0.0,
+      "sigh": 0.004,
+      "crying": 0.001
+     }
+    },
+    {
+     "start": 6.64,
+     "end": 7.54,
+     "text": "ice cream shop, yeah?",
+     "words": [
+      {
+       "start": 6.64,
+       "end": 6.76,
+       "word": "ice",
+       "score": 0.711
+      },
+      {
+       "start": 6.78,
+       "end": 7.02,
+       "word": "cream",
+       "score": 0.736
+      },
+      {
+       "start": 7.06,
+       "end": 7.32,
+       "word": "shop,",
+       "score": 0.995
+      },
+      {
+       "start": 7.34,
+       "end": 7.54,
+       "word": "yeah?",
+       "score": 0.63
+      }
+     ],
+     "expression": {
+      "label": "happy",
+      "score": 0.647,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.023,
+      "angry": 0.295,
+      "anxious": 0.011,
+      "bored": 0.0,
+      "confused": 0.001,
+      "disgusted": 0.002,
+      "happy": 0.647,
+      "neutral": 0.019,
+      "sad": 0.002,
+      "surprised": 0.0
+     },
+     "emotion": {
+      "label": "neutral",
+      "score": 0.974,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.0,
+      "fearful": 0.0,
+      "happy": 0.023,
+      "neutral": 0.974,
+      "other": 0.0,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.719,
+      "dominance": 0.689,
+      "valence": 0.689
+     },
+     "prosody": {
+      "pitch_hz": 267.6,
+      "pitch_semitones": -0.1,
+      "energy_db": -30.66,
+      "energy_rel_db": 0.0,
+      "rate_wps": 4.88,
+      "rate_rel": 1.0,
+      "voiced_fraction": 0.844,
+      "pitch_range_st": 2.7
+     },
+     "tags": [
+      {
+       "label": "high energy",
+       "score": 0.719,
+       "source": "arousal"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.003,
+      "whisper": 0.0,
+      "singing": 0.0,
+      "humming": 0.0,
+      "sigh": 0.001,
+      "crying": 0.0
+     }
+    },
+    {
+     "start": 7.88,
+     "end": 9.26,
+     "text": "On...",
+     "words": [
+      {
+       "start": 7.88,
+       "end": 9.26,
+       "word": "On...",
+       "score": 0.841
+      }
+     ],
+     "expression": {
+      "label": "happy",
+      "score": 0.376,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.288,
+      "angry": 0.193,
+      "anxious": 0.074,
+      "bored": 0.0,
+      "confused": 0.002,
+      "disgusted": 0.008,
+      "happy": 0.376,
+      "neutral": 0.003,
+      "sad": 0.057,
+      "surprised": 0.0
+     },
+     "emotion": {
+      "label": "neutral",
+      "score": 0.425,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.001,
+      "disgusted": 0.003,
+      "fearful": 0.004,
+      "happy": 0.033,
+      "neutral": 0.425,
+      "other": 0.003,
+      "sad": 0.008,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.694,
+      "dominance": 0.658,
+      "valence": 0.816
+     },
+     "prosody": {
+      "pitch_hz": 269.2,
+      "pitch_semitones": 0.0,
+      "energy_db": -30.79,
+      "energy_rel_db": -0.13,
+      "rate_wps": 0.72,
+      "rate_rel": 0.15,
+      "voiced_fraction": 0.78,
+      "pitch_range_st": 1.07
+     },
+     "tags": [
+      {
+       "label": "high energy",
+       "score": 0.694,
+       "source": "arousal"
+      },
+      {
+       "label": "slower",
+       "score": 1.0,
+       "source": "prosody"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.003,
+      "whisper": 0.0,
+      "singing": 0.001,
+      "humming": 0.0,
+      "sigh": 0.151,
+      "crying": 0.002
+     }
+    },
+    {
+     "start": 13.96,
+     "end": 17.95,
+     "text": "But see, I was already in motion, and you chose to speed up.",
+     "words": [
+      {
+       "start": 13.96,
+       "end": 14.1,
+       "word": "But",
+       "score": 0.831
+      },
+      {
+       "start": 14.26,
+       "end": 14.48,
+       "word": "see,",
+       "score": 0.847
+      },
+      {
+       "start": 14.72,
+       "end": 14.78,
+       "word": "I",
+       "score": 0.995
+      },
+      {
+       "start": 14.84,
+       "end": 14.98,
+       "word": "was",
+       "score": 0.755
+      },
+      {
+       "start": 15.06,
+       "end": 15.38,
+       "word": "already",
+       "score": 0.728
+      },
+      {
+       "start": 15.58,
+       "end": 15.68,
+       "word": "in",
+       "score": 0.52
+      },
+      {
+       "start": 15.76,
+       "end": 16.25,
+       "word": "motion,",
+       "score": 0.865
+      },
+      {
+       "start": 16.37,
+       "end": 16.47,
+       "word": "and",
+       "score": 0.687
+      },
+      {
+       "start": 16.53,
+       "end": 16.83,
+       "word": "you",
+       "score": 0.8
+      },
+      {
+       "start": 17.03,
+       "end": 17.29,
+       "word": "chose",
+       "score": 0.819
+      },
+      {
+       "start": 17.33,
+       "end": 17.41,
+       "word": "to",
+       "score": 0.769
+      },
+      {
+       "start": 17.49,
+       "end": 17.77,
+       "word": "speed",
+       "score": 0.867
+      },
+      {
+       "start": 17.85,
+       "end": 17.95,
+       "word": "up.",
+       "score": 0.972
+      }
+     ],
+     "expression": {
+      "label": "angry",
+      "score": 0.931,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.003,
+      "angry": 0.931,
+      "anxious": 0.0,
+      "bored": 0.0,
+      "confused": 0.0,
+      "disgusted": 0.0,
+      "happy": 0.065,
+      "neutral": 0.001,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "emotion": {
+      "label": "angry",
+      "score": 1.0,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 1.0,
+      "disgusted": 0.0,
+      "fearful": 0.0,
+      "happy": 0.0,
+      "neutral": 0.0,
+      "other": 0.0,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.704,
+      "dominance": 0.699,
+      "valence": 0.36
+     },
+     "prosody": {
+      "pitch_hz": 343.1,
+      "pitch_semitones": 4.2,
+      "energy_db": -28.15,
+      "energy_rel_db": 2.51,
+      "rate_wps": 5.02,
+      "rate_rel": 1.03,
+      "voiced_fraction": 0.758,
+      "pitch_range_st": 2.81
+     },
+     "tags": [
+      {
+       "label": "high energy",
+       "score": 0.704,
+       "source": "arousal"
+      },
+      {
+       "label": "pitch ↑",
+       "score": 1.0,
+       "source": "prosody"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.007,
+      "whisper": 0.0,
+      "singing": 0.001,
+      "humming": 0.0,
+      "sigh": 0.001,
+      "crying": 0.0
+     }
+    },
+    {
+     "start": 17.99,
+     "end": 23.71,
+     "text": "That's not... Yeah, it's hard to rest when you're waiting for a long time, isn't it?",
+     "words": [
+      {
+       "start": 17.99,
+       "end": 18.17,
+       "word": "That's",
+       "score": 0.913
+      },
+      {
+       "start": 18.19,
+       "end": 18.95,
+       "word": "not...",
+       "score": 0.706
+      },
+      {
+       "start": 19.11,
+       "end": 19.45,
+       "word": "Yeah,",
+       "score": 0.494
+      },
+      {
+       "start": 19.51,
+       "end": 19.69,
+       "word": "it's",
+       "score": 0.57
+      },
+      {
+       "start": 19.73,
+       "end": 19.95,
+       "word": "hard",
+       "score": 0.825
+      },
+      {
+       "start": 19.99,
+       "end": 20.09,
+       "word": "to",
+       "score": 0.956
+      },
+      {
+       "start": 20.17,
+       "end": 20.43,
+       "word": "rest",
+       "score": 0.792
+      },
+      {
+       "start": 20.49,
+       "end": 20.63,
+       "word": "when",
+       "score": 0.796
+      },
+      {
+       "start": 20.67,
+       "end": 20.91,
+       "word": "you're",
+       "score": 0.584
+      },
+      {
+       "start": 20.99,
+       "end": 21.37,
+       "word": "waiting",
+       "score": 0.759
+      },
+      {
+       "start": 21.49,
+       "end": 21.81,
+       "word": "for",
+       "score": 0.733
+      },
+      {
+       "start": 21.83,
+       "end": 21.85,
+       "word": "a",
+       "score": 0.001
+      },
+      {
+       "start": 22.19,
+       "end": 22.83,
+       "word": "long",
+       "score": 0.779
+      },
+      {
+       "start": 22.91,
+       "end": 23.27,
+       "word": "time,",
+       "score": 0.875
+      },
+      {
+       "start": 23.37,
+       "end": 23.61,
+       "word": "isn't",
+       "score": 0.712
+      },
+      {
+       "start": 23.65,
+       "end": 23.71,
+       "word": "it?",
+       "score": 0.985
+      }
+     ],
+     "expression": {
+      "label": "confused",
+      "score": 0.544,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.002,
+      "angry": 0.067,
+      "anxious": 0.012,
+      "bored": 0.181,
+      "confused": 0.544,
+      "disgusted": 0.003,
+      "happy": 0.013,
+      "neutral": 0.155,
+      "sad": 0.023,
+      "surprised": 0.001
+     },
+     "emotion": {
+      "label": "neutral",
+      "score": 0.94,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.0,
+      "disgusted": 0.001,
+      "fearful": 0.0,
+      "happy": 0.0,
+      "neutral": 0.94,
+      "other": 0.001,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.504,
+      "dominance": 0.573,
+      "valence": 0.479
+     },
+     "prosody": {
+      "pitch_hz": 187.1,
+      "pitch_semitones": -6.3,
+      "energy_db": -36.95,
+      "energy_rel_db": -6.29,
+      "rate_wps": 3.58,
+      "rate_rel": 0.73,
+      "voiced_fraction": 0.685,
+      "pitch_range_st": 2.63
+     },
+     "tags": [
+      {
+       "label": "pitch ↓",
+       "score": 1.0,
+       "source": "prosody"
+      },
+      {
+       "label": "quiet",
+       "score": 1.0,
+       "source": "prosody"
+      },
+      {
+       "label": "slower",
+       "score": 1.0,
+       "source": "prosody"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.002,
+      "whisper": 0.001,
+      "singing": 0.0,
+      "humming": 0.0,
+      "sigh": 0.038,
+      "crying": 0.0
+     }
+    },
+    {
+     "start": 24.87,
+     "end": 31.06,
+     "text": "You're gonna want a jacket and a nice umbrella for Sunday just in case that drizzle doesn't go away like I said it would.",
+     "words": [
+      {
+       "start": 24.87,
+       "end": 25.01,
+       "word": "You're",
+       "score": 0.95
+      },
+      {
+       "start": 25.03,
+       "end": 25.23,
+       "word": "gonna",
+       "score": 0.301
+      },
+      {
+       "start": 25.27,
+       "end": 25.49,
+       "word": "want",
+       "score": 0.893
+      },
+      {
+       "start": 25.51,
+       "end": 25.69,
+       "word": "a",
+       "score": 0.882
+      },
+      {
+       "start": 25.79,
+       "end": 26.19,
+       "word": "jacket",
+       "score": 0.986
+      },
+      {
+       "start": 26.27,
+       "end": 26.37,
+       "word": "and",
+       "score": 0.789
+      },
+      {
+       "start": 26.39,
+       "end": 26.41,
+       "word": "a",
+       "score": 0.989
+      },
+      {
+       "start": 26.49,
+       "end": 26.69,
+       "word": "nice",
+       "score": 0.995
+      },
+      {
+       "start": 26.79,
+       "end": 27.26,
+       "word": "umbrella",
+       "score": 0.838
+      },
+      {
+       "start": 27.38,
+       "end": 27.6,
+       "word": "for",
+       "score": 0.657
+      },
+      {
+       "start": 27.72,
+       "end": 28.14,
+       "word": "Sunday",
+       "score": 0.921
+      },
+      {
+       "start": 28.24,
+       "end": 28.48,
+       "word": "just",
+       "score": 0.964
+      },
+      {
+       "start": 28.52,
+       "end": 28.6,
+       "word": "in",
+       "score": 0.863
+      },
+      {
+       "start": 28.64,
+       "end": 28.88,
+       "word": "case",
+       "score": 0.985
+      },
+      {
+       "start": 28.92,
+       "end": 29.08,
+       "word": "that",
+       "score": 0.841
+      },
+      {
+       "start": 29.12,
+       "end": 29.5,
+       "word": "drizzle",
+       "score": 0.864
+      },
+      {
+       "start": 29.58,
+       "end": 29.84,
+       "word": "doesn't",
+       "score": 0.872
+      },
+      {
+       "start": 29.88,
+       "end": 30.04,
+       "word": "go",
+       "score": 0.901
+      },
+      {
+       "start": 30.08,
+       "end": 30.26,
+       "word": "away",
+       "score": 0.984
+      },
+      {
+       "start": 30.32,
+       "end": 30.46,
+       "word": "like",
+       "score": 0.906
+      },
+      {
+       "start": 30.52,
+       "end": 30.56,
+       "word": "I",
+       "score": 0.825
+      },
+      {
+       "start": 30.6,
+       "end": 30.78,
+       "word": "said",
+       "score": 0.828
+      },
+      {
+       "start": 30.8,
+       "end": 30.84,
+       "word": "it",
+       "score": 0.992
+      },
+      {
+       "start": 30.88,
+       "end": 31.06,
+       "word": "would.",
+       "score": 0.854
+      }
+     ],
+     "expression": {
+      "label": "happy",
+      "score": 0.418,
+      "source": "expression"
+     },
+     "expression_scores": {
+      "amused": 0.014,
+      "angry": 0.407,
+      "anxious": 0.013,
+      "bored": 0.001,
+      "confused": 0.026,
+      "disgusted": 0.088,
+      "happy": 0.418,
+      "neutral": 0.026,
+      "sad": 0.008,
+      "surprised": 0.0
+     },
+     "emotion": {
+      "label": "neutral",
+      "score": 0.801,
+      "source": "emotion2vec"
+     },
+     "emotion_scores": {
+      "angry": 0.003,
+      "disgusted": 0.065,
+      "fearful": 0.0,
+      "happy": 0.01,
+      "neutral": 0.801,
+      "other": 0.007,
+      "sad": 0.0,
+      "surprised": 0.0
+     },
+     "voice": {
+      "arousal": 0.663,
+      "dominance": 0.675,
+      "valence": 0.495
+     },
+     "prosody": {
+      "pitch_hz": 278.7,
+      "pitch_semitones": 0.6,
+      "energy_db": -28.11,
+      "energy_rel_db": 2.55,
+      "rate_wps": 4.9,
+      "rate_rel": 1.0,
+      "voiced_fraction": 0.854,
+      "pitch_range_st": 3.48
+     },
+     "tags": [
+      {
+       "label": "high energy",
+       "score": 0.663,
+       "source": "arousal"
+      }
+     ],
+     "sound_scores": {
+      "laughter": 0.001,
+      "whisper": 0.001,
+      "singing": 0.0,
+      "humming": 0.0,
+      "sigh": 0.001,
+      "crying": 0.0
+     }
+    }
+   ],
+   "events": [
+    {
+     "start": 3.51,
+     "end": 4.43,
+     "type": "pause",
+     "score": null
+    },
+    {
+     "start": 5.6,
+     "end": 6.64,
+     "type": "laughter",
+     "score": 0.064
+    },
+    {
+     "start": 9.26,
+     "end": 13.96,
+     "type": "pause",
+     "score": null
+    },
+    {
+     "start": 23.71,
+     "end": 24.87,
+     "type": "pause",
+     "score": null
+    }
+   ],
+   "models": {
+    "asr": "whisperx/large-v3-turbo",
+    "emotion": "emotion2vec/emotion2vec_plus_large",
+    "voice": "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+    "sounds": "MIT/ast-finetuned-audioset-10-10-0.4593"
+   }
+  }
+ }
 }

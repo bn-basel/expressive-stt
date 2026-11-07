@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from . import prosody
+from . import expression, prosody
 from .schema import Event, Result, Segment, Tag
 
 SR = 16_000
@@ -22,6 +22,9 @@ OTHER_SOUND_T = 0.40  # singing/humming/sigh/crying: not tuned or evaluated
 MIN_GAP = 0.4  # shortest non-speech stretch worth checking for laughter
 MIN_EMOTION_SEC = 0.2
 EMOTION_PAD = 0.5  # seconds of context on each side; chosen on dev speakers
+# Arousal cues (voice model, 0-1). Chosen on dev speakers' conversations: >= 0.6 tagged 80% of
+# happy/laughing/angry speech and none of the bored/neutral speech; < 0.3 the other way round.
+HIGH_ENERGY, LOW_ENERGY = 0.6, 0.3
 
 
 def load_audio(path: str) -> np.ndarray:
@@ -52,7 +55,8 @@ class Pipeline:
 
         self.opts = opts or Options()
         self.device = pick_device(self.opts.device)
-        self._asr = self._emo = self._snd = None
+        self._asr = self._emo = self._snd = self._dim = None
+        self.last_features: list[np.ndarray | None] = []  # per segment, for evaluation scripts
 
     # Models load on first use so `--no-emotion` etc. skip the download.
     @property
@@ -79,6 +83,14 @@ class Pipeline:
             self._snd = SoundTagger(device=self.device)
         return self._snd
 
+    @property
+    def dim(self):
+        if self._dim is None:
+            from .models import VoiceDimensions
+
+            self._dim = VoiceDimensions(device=self.device)
+        return self._dim
+
     def run(self, audio: np.ndarray | str) -> Result:
         if isinstance(audio, str):
             audio = load_audio(audio)
@@ -94,13 +106,20 @@ class Pipeline:
             s.prosody = prosody.segment_prosody(track, s)
         prosody.add_relative(segments)
 
+        hidden: list[np.ndarray | None] = [None] * len(segments)
         if self.opts.emotion:
-            for s in segments:
+            for i, s in enumerate(segments):
                 if s.end - s.start >= MIN_EMOTION_SEC:
-                    scores = self.emo(clip(max(0, s.start - EMOTION_PAD), s.end + EMOTION_PAD))
+                    piece = clip(max(0, s.start - EMOTION_PAD), s.end + EMOTION_PAD)
+                    scores = self.emo(piece)
                     label = max(scores, key=scores.get)
                     s.emotion_scores = {k: round(v, 3) for k, v in scores.items()}
                     s.emotion = Tag(label, round(scores[label], 3), "emotion2vec")
+                    dims, hidden[i] = self.dim(piece)
+                    s.voice = {k: round(v, 3) for k, v in dims.items()}
+        self.last_features = [None if h is None else np.concatenate(
+            [[s.voice[k] for k in expression.VOICE_LABELS], h]).astype(np.float32)
+            for s, h in zip(segments, hidden)]
 
         events = prosody.find_pauses(segments)
         if self.opts.sounds:
@@ -116,19 +135,47 @@ class Pipeline:
             events = [e for e in events if not (e.type == "pause" and _overlaps(e, laughs))]
 
         for s in segments:
+            s.tags += energy_tags(s.voice)
             if s.prosody:
                 s.tags += prosody.cue_tags(s.prosody)
 
+        if self.opts.emotion:
+            self.add_expressions(segments, hidden)
+
         events.sort(key=lambda e: e.start)
         return Result(lang, duration, segments, events, models=self.model_names())
+
+    def add_expressions(self, segments: list[Segment], hidden: list[np.ndarray | None]) -> None:
+        head = expression.load_head()
+        if head is None:
+            return
+        for s, h in zip(segments, hidden):
+            if h is None:
+                continue
+            probs = head(expression.features(s, h))
+            label = max(probs, key=probs.get)
+            s.expression_scores = {k: round(v, 3) for k, v in probs.items()}
+            s.expression = Tag(label, round(probs[label], 3), "expression")
 
     def model_names(self) -> dict[str, str]:
         names = {"asr": f"whisperx/{self.opts.whisper_model}"}
         if self.opts.emotion:
             names["emotion"] = "emotion2vec/emotion2vec_plus_large"
+            names["voice"] = "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim"
         if self.opts.sounds:
             names["sounds"] = "MIT/ast-finetuned-audioset-10-10-0.4593"
         return names
+
+
+def energy_tags(voice: dict[str, float]) -> list[Tag]:
+    a = voice.get("arousal")
+    if a is None:
+        return []
+    if a >= HIGH_ENERGY:
+        return [Tag("high energy", a, "arousal")]
+    if a < LOW_ENERGY:
+        return [Tag("low energy", a, "arousal")]
+    return []
 
 
 def sound_tags(scores: dict[str, float], voiced_fraction: float) -> list[Tag]:

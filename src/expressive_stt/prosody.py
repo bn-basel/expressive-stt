@@ -55,6 +55,10 @@ def segment_prosody(track: Track, seg: Segment) -> Prosody:
     # Ignore near-silent frames so pauses inside a segment don't drag the level down.
     active = db > (db.max() - 30) if len(db) else db.astype(bool)
     pitch = float(np.nanmedian(f0[voiced])) if voiced.any() else None
+    spread = None
+    if voiced.sum() >= 5:
+        st = 12 * np.log2(f0[voiced] / pitch)
+        spread = float(np.nanstd(st))
     energy = float(db[active].mean()) if active.any() else -100.0
     voiced_frac = float(voiced[active].mean()) if active.any() else 0.0
     rate = None
@@ -62,7 +66,8 @@ def segment_prosody(track: Track, seg: Segment) -> Prosody:
         spoken = sum(max(w.end - w.start, 0.05) for w in seg.words)
         rate = len(seg.words) / max(spoken, 0.3)
     r = lambda x, n: None if x is None else round(x, n)  # noqa: E731
-    return Prosody(r(pitch, 1), None, round(energy, 2), None, r(rate, 2), None, round(voiced_frac, 3))
+    return Prosody(r(pitch, 1), None, round(energy, 2), None, r(rate, 2), None, round(voiced_frac, 3),
+                   r(spread, 2))
 
 
 def add_relative(segments: list[Segment]) -> None:

@@ -1,4 +1,4 @@
-"""Thin wrappers around the three open models. Each loads once and is reused."""
+"""Thin wrappers around the open models. Each loads once and is reused."""
 
 from __future__ import annotations
 
@@ -125,6 +125,52 @@ class EmotionModel:
                 if "unk" not in lab}
 
 
+class VoiceDimensions:
+    """wav2vec2-large-robust fine-tuned on MSP-Podcast (natural podcast speech): arousal,
+    dominance and valence, each about 0-1. Also returns the pooled hidden state (1024-d),
+    which the expression head reads."""
+
+    def __init__(self, model: str = "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+                 device: str = "cuda"):
+        import torch
+        from torch import nn
+        from transformers import Wav2Vec2FeatureExtractor, Wav2Vec2Model, Wav2Vec2PreTrainedModel
+
+        class Head(nn.Module):
+            def __init__(self, c):
+                super().__init__()
+                self.dense = nn.Linear(c.hidden_size, c.hidden_size)
+                self.dropout = nn.Dropout(c.final_dropout)
+                self.out_proj = nn.Linear(c.hidden_size, c.num_labels)
+
+            def forward(self, x):
+                return self.out_proj(self.dropout(torch.tanh(self.dense(self.dropout(x)))))
+
+        class Net(Wav2Vec2PreTrainedModel):  # the model card's architecture
+            def __init__(self, c):
+                super().__init__(c)
+                self.wav2vec2 = Wav2Vec2Model(c)
+                self.classifier = Head(c)
+                self.post_init()
+
+            def forward(self, x):
+                h = self.wav2vec2(x)[0].mean(1)
+                return h, self.classifier(h)
+
+        self.torch, self.device = torch, device
+        with quiet():
+            self.fe = Wav2Vec2FeatureExtractor.from_pretrained(model)
+            self.model = Net.from_pretrained(model, use_safetensors=True).to(device).eval()
+        self.labels = [self.model.config.id2label[i] for i in range(self.model.config.num_labels)]
+
+    def __call__(self, audio: np.ndarray) -> tuple[dict[str, float], np.ndarray]:
+        x = self.fe(audio, sampling_rate=SR, return_tensors="pt").input_values.to(self.device)
+        with self.torch.no_grad():
+            h, y = self.model(x)
+        dims = dict(zip(self.labels, map(float, y[0].cpu().numpy())))
+        return dims, h[0].cpu().numpy().astype(np.float32)
+
+
 # AudioSet classes we care about, grouped. A group's score is the max over its classes.
 SOUND_GROUPS = {
     "laughter": ["Laughter", "Giggle", "Snicker", "Belly laugh", "Chuckle, chortle", "Baby laughter"],
@@ -155,9 +201,15 @@ class SoundTagger:
     def __call__(self, clips: list[np.ndarray], batch: int = 16) -> list[dict[str, float]]:
         """Score each clip. Clips longer than 10 s are cut into pieces; the max is kept."""
         pieces, owner = [], []
+        min_len = SR // 2  # the feature extractor needs >= 25 ms; tiny tails carry nothing anyway
         for i, c in enumerate(clips):
             for a in range(0, max(len(c), 1), 10 * SR):
-                pieces.append(c[a:a + 10 * SR])
+                piece = c[a:a + 10 * SR]
+                if len(piece) < min_len:
+                    if a > 0:
+                        continue  # short tail of a long clip: skip it
+                    piece = np.pad(piece, (0, min_len - len(piece)))  # short clip: pad with silence
+                pieces.append(piece)
                 owner.append(i)
         out = [dict.fromkeys(self.groups, 0.0) for _ in clips]
         for b in range(0, len(pieces), batch):

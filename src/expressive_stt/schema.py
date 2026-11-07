@@ -31,6 +31,7 @@ class Prosody:
     rate_wps: float | None  # words per second
     rate_rel: float | None  # ratio to the file's baseline
     voiced_fraction: float  # share of frames with a detected pitch
+    pitch_range_st: float | None = None  # spread of pitch inside the segment (semitones, std)
 
 
 @dataclass
@@ -39,8 +40,11 @@ class Segment:
     end: float
     text: str
     words: list[Word] = field(default_factory=list)
-    emotion: Tag | None = None
+    expression: Tag | None = None  # final label: both voice models + prosody, via a small fitted head
+    expression_scores: dict[str, float] = field(default_factory=dict)
+    emotion: Tag | None = None  # emotion2vec on the voice alone
     emotion_scores: dict[str, float] = field(default_factory=dict)
+    voice: dict[str, float] = field(default_factory=dict)  # arousal, dominance, valence, 0-1
     prosody: Prosody | None = None
     tags: list[Tag] = field(default_factory=list)
     sound_scores: dict[str, float] = field(default_factory=dict)  # raw AudioSet group scores

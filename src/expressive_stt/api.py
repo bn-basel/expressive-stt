@@ -13,7 +13,7 @@ from fastapi.responses import JSONResponse, PlainTextResponse
 from .formats import render
 from .pipeline import Options, Pipeline
 
-app = FastAPI(title="expressive-stt", version="0.1.0")
+app = FastAPI(title="expressive-stt", version="0.2.0")
 
 
 @lru_cache(maxsize=1)

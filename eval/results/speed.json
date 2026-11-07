@@ -23,19 +23,19 @@
       "device": "cuda",
       "torch_threads": 24,
       "gpu": "NVIDIA GeForce RTX 5080",
-      "model_load_seconds": 17.02,
-      "first_run_seconds": 4.14,
-      "warm_run_seconds": 1.9,
-      "rtf": 0.03,
+      "model_load_seconds": 12.79,
+      "first_run_seconds": 5.78,
+      "warm_run_seconds": 1.98,
+      "rtf": 0.0312,
       "segments": 7
     },
     "cpu": {
       "device": "cpu",
       "torch_threads": 24,
-      "model_load_seconds": 17.39,
-      "first_run_seconds": 22.53,
-      "warm_run_seconds": 20.66,
-      "rtf": 0.3259,
+      "model_load_seconds": 13.91,
+      "first_run_seconds": 25.01,
+      "warm_run_seconds": 21.97,
+      "rtf": 0.3466,
       "segments": 7
     }
   }

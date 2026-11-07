@@ -83,9 +83,41 @@ def test_sound_tags_and_whisper_rule():
     assert rule[0].label == "whisper" and rule[0].source == "rule"
 
 
+def test_sound_tagger_handles_tiny_and_ragged_clips():
+    from expressive_stt.models import SoundTagger
+
+    class FE:  # records what the real feature extractor would receive
+        def __init__(self):
+            self.lengths = []
+
+        def __call__(self, pieces, **kw):
+            self.lengths += [len(p) for p in pieces]
+            import torch
+
+            return type("B", (dict,), {"to": lambda self, d: self})({"x": torch.zeros(len(pieces), 1)})
+
+    import torch
+
+    t = SoundTagger.__new__(SoundTagger)
+    t.torch, t.device, t.fe = torch, "cpu", FE()
+    t.model = lambda **kw: type("O", (), {"logits": torch.zeros(len(kw["x"]), 3)})()
+    t.groups = {"laughter": [0], "whisper": [1]}
+    out = t([np.zeros(100, np.float32), np.zeros(10 * SR + 320, np.float32)])
+    assert len(out) == 2
+    assert min(t.fe.lengths) >= SR // 2  # nothing shorter than the extractor can take
+
+
 class FakeEmotion:
     def __call__(self, audio):
         return {"happy": 0.8, "neutral": 0.2}
+
+
+class FakeDims:
+    """Loud clips get high arousal; the 'hidden state' is 4 ones."""
+
+    def __call__(self, audio):
+        a = 0.9 if np.abs(audio).max() > 0.4 else 0.2
+        return {"arousal": a, "dominance": 0.5, "valence": 0.5}, np.ones(4, np.float32)
 
 
 class FakeSounds:
@@ -97,18 +129,40 @@ class FakeSounds:
 
 def fake_pipeline():
     p = Pipeline(Options(device="cpu"))
-    p._emo, p._snd = FakeEmotion(), FakeSounds()
+    p._emo, p._snd, p._dim = FakeEmotion(), FakeSounds(), FakeDims()
     return p
 
 
-def test_annotate_end_to_end_with_fakes():
-    audio = np.concatenate([tone(200, 1.0), np.zeros(SR, np.float32) + 0.01, tone(200, 1.0)])
-    segs = [Segment(0.0, 1.0, "hello there", words(0.0, 2)), Segment(2.0, 3.0, "bye", words(2.0, 1))]
+def fake_head_file(path):
+    """A tiny head over 4-d fake hidden states: 'surprised' wins when arousal is high."""
+    from expressive_stt import expression
+
+    n = len(expression.VOICE_LABELS) + 4 + len(expression.E2V_LABELS) + 4 + 2
+    W = np.zeros((2, n), np.float32)
+    W[1, expression.VOICE_LABELS.index("arousal")] = 20.0
+    np.savez(path, labels=np.array(["neutral", "surprised"]), W=W, b=np.array([5.0, 0.0], np.float32),
+             mean=np.zeros(n, np.float32), scale=np.ones(n, np.float32))
+
+
+def test_annotate_end_to_end_with_fakes(tmp_path, monkeypatch):
+    from expressive_stt import expression
+
+    fake_head_file(tmp_path / "head.npz")
+    head = expression.load_head.__wrapped__(str(tmp_path / "head.npz"))
+    monkeypatch.setattr(expression, "load_head", lambda: head)
+    audio = np.concatenate([tone(200, 1.0), np.zeros(SR, np.float32) + 0.01, tone(200, 1.0, amp=0.5)])
+    segs = [Segment(0.0, 1.0, "hello there", words(0.0, 2)), Segment(2.0, 3.0, "no way!", words(2.0, 1))]
     r = fake_pipeline().annotate(audio, segs, "en")
     assert r.segments[0].emotion.label == "happy"
+    assert [s.voice["arousal"] for s in r.segments] == [0.2, 0.9]
+    assert [s.expression.label for s in r.segments] == ["neutral", "surprised"]
+    assert [t.label for t in r.segments[0].tags][:1] == ["low energy"]
+    assert "high energy" in [t.label for t in r.segments[1].tags]
     assert [e.type for e in r.events] == ["laughter"]  # pause replaced by the laugh it contains
     text = formats.to_text(r)
-    assert '"hello there"' in text and "(laughs)" in text and "happy 0.80" in text
+    assert '"hello there"' in text and "(laughs)" in text
+    assert "surprised 1.00" in text and "happy" not in text  # expression wins over raw emotion
+    assert len(r.segments[1].expression_scores) == 2
 
 
 def sample_result():

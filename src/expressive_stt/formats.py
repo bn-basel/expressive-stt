@@ -19,9 +19,11 @@ def ts(t: float) -> str:
 
 
 def segment_tags(s: Segment) -> list[str]:
+    """The expression label if there is one, else the voice-only emotion; then the cue tags."""
     out = []
-    if s.emotion and s.emotion.label not in QUIET_EMOTIONS and s.emotion.score >= MIN_EMOTION_SCORE:
-        out.append(f"{s.emotion.label} {s.emotion.score:.2f}")
+    main = s.expression or s.emotion
+    if main and main.label not in QUIET_EMOTIONS and main.score >= MIN_EMOTION_SCORE:
+        out.append(f"{main.label} {main.score:.2f}")
     out += [t.label for t in s.tags]
     return out
 
@@ -53,8 +55,9 @@ def to_text(r: Result, width: int = 48) -> str:
 LLM_HEADER = """\
 Below is a transcript of what I said out loud, with cues about HOW I said it.
 The cues were estimated automatically from my voice and can be wrong; treat them as hints.
-[...] after a line = detected emotion with model confidence (0-1) and voice cues
-(pitch/loudness/pace compared with my usual voice; whisper; laughing).
+[...] after a line = how I seemed to feel (e.g. happy, amused, surprised, confused, sad, bored,
+angry) with the model's confidence (0-1), then voice cues: high/low energy (happy + high energy
+often means excited), pitch/loudness/pace compared with my usual voice, whisper, laughing.
 (laughs) and (pause) mark sounds and silences between words.
 Please respond to what I said and take how I seemed to feel into account."""
 

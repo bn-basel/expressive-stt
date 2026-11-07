@@ -1,0 +1,460 @@
+{
+ "C": 0.01,
+ "dev_macro_f1_by_C": {
+  "0.003": 0.558,
+  "0.01": 0.572,
+  "0.03": 0.571,
+  "0.1": 0.563
+ },
+ "min_train_sec": 0.5,
+ "test_speakers": [
+  "ex03",
+  "ex04"
+ ],
+ "conv": {
+  "labels": [
+   "amused",
+   "angry",
+   "anxious",
+   "bored",
+   "confused",
+   "disgusted",
+   "happy",
+   "neutral",
+   "sad",
+   "surprised"
+  ],
+  "chance_accuracy": 0.1,
+  "segments": {
+   "n": 2561,
+   "accuracy": 0.547,
+   "macro_f1": 0.544
+  },
+  "clips": {
+   "n": 86,
+   "accuracy": 0.826,
+   "macro_f1": 0.856
+  },
+  "per_label_recall": {
+   "amused": 0.801,
+   "angry": 0.834,
+   "anxious": 0.581,
+   "bored": 0.446,
+   "confused": 0.431,
+   "disgusted": 0.552,
+   "happy": 0.564,
+   "neutral": 0.381,
+   "sad": 0.442,
+   "surprised": 0.69
+  },
+  "per_speaker_accuracy": {
+   "ex03": 0.499,
+   "ex04": 0.588
+  },
+  "confusion": {
+   "rows_gold_cols_pred": [
+    "amused",
+    "angry",
+    "anxious",
+    "bored",
+    "confused",
+    "disgusted",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+   ],
+   "matrix": [
+    [
+     214,
+     11,
+     3,
+     2,
+     3,
+     6,
+     27,
+     0,
+     1,
+     0
+    ],
+    [
+     3,
+     216,
+     1,
+     3,
+     10,
+     5,
+     17,
+     4,
+     0,
+     0
+    ],
+    [
+     3,
+     12,
+     68,
+     2,
+     7,
+     5,
+     8,
+     1,
+     10,
+     1
+    ],
+    [
+     4,
+     2,
+     9,
+     95,
+     36,
+     4,
+     1,
+     35,
+     20,
+     7
+    ],
+    [
+     0,
+     26,
+     6,
+     17,
+     94,
+     6,
+     13,
+     49,
+     7,
+     0
+    ],
+    [
+     13,
+     13,
+     10,
+     10,
+     20,
+     158,
+     31,
+     5,
+     18,
+     8
+    ],
+    [
+     41,
+     32,
+     6,
+     0,
+     6,
+     10,
+     136,
+     1,
+     2,
+     7
+    ],
+    [
+     7,
+     21,
+     19,
+     99,
+     51,
+     4,
+     18,
+     177,
+     27,
+     41
+    ],
+    [
+     72,
+     18,
+     20,
+     37,
+     13,
+     32,
+     19,
+     7,
+     175,
+     3
+    ],
+    [
+     0,
+     1,
+     5,
+     3,
+     1,
+     0,
+     7,
+     12,
+     2,
+     69
+    ]
+   ]
+  },
+  "on_emotion2vec_labels": {
+   "labels": [
+    "angry",
+    "anxious",
+    "disgusted",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+   ],
+   "emotion2vec_alone": {
+    "n": 1863,
+    "accuracy": 0.362,
+    "macro_f1": 0.309
+   },
+   "this_head": {
+    "n": 1863,
+    "accuracy": 0.536,
+    "macro_f1": 0.599
+   }
+  },
+  "energy_tags": {
+   "amused": {
+    "high": 0.93,
+    "low": 0.0
+   },
+   "angry": {
+    "high": 0.84,
+    "low": 0.0
+   },
+   "anxious": {
+    "high": 0.3,
+    "low": 0.0
+   },
+   "bored": {
+    "high": 0.01,
+    "low": 0.33
+   },
+   "confused": {
+    "high": 0.1,
+    "low": 0.09
+   },
+   "disgusted": {
+    "high": 0.38,
+    "low": 0.01
+   },
+   "happy": {
+    "high": 0.84,
+    "low": 0.0
+   },
+   "neutral": {
+    "high": 0.09,
+    "low": 0.33
+   },
+   "sad": {
+    "high": 0.37,
+    "low": 0.06
+   },
+   "surprised": {
+    "high": 0.17,
+    "low": 0.15
+   }
+  }
+ },
+ "read": {
+  "labels": [
+   "amused",
+   "confused",
+   "happy",
+   "neutral",
+   "sad"
+  ],
+  "chance_accuracy": 0.2,
+  "segments": {
+   "n": 1093,
+   "accuracy": 0.761,
+   "macro_f1": 0.77
+  },
+  "clips": {
+   "n": 1000,
+   "accuracy": 0.772,
+   "macro_f1": 0.78
+  },
+  "per_label_recall": {
+   "amused": 0.941,
+   "confused": 0.886,
+   "happy": 0.821,
+   "neutral": 0.618,
+   "sad": 0.539
+  },
+  "per_speaker_accuracy": {
+   "ex03": 0.733,
+   "ex04": 0.789
+  },
+  "confusion": {
+   "rows_gold_cols_pred": [
+    "amused",
+    "angry",
+    "anxious",
+    "bored",
+    "confused",
+    "disgusted",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+   ],
+   "matrix": [
+    [
+     207,
+     1,
+     0,
+     0,
+     0,
+     0,
+     12,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0,
+     0,
+     194,
+     0,
+     5,
+     14,
+     4,
+     1
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     8,
+     0,
+     0,
+     3,
+     4,
+     179,
+     15,
+     6,
+     0
+    ],
+    [
+     0,
+     6,
+     0,
+     0,
+     14,
+     0,
+     49,
+     134,
+     13,
+     1
+    ],
+    [
+     1,
+     0,
+     2,
+     14,
+     47,
+     1,
+     10,
+     25,
+     118,
+     1
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   ]
+  },
+  "on_emotion2vec_labels": {
+   "labels": [
+    "happy",
+    "neutral",
+    "sad"
+   ],
+   "emotion2vec_alone": {
+    "n": 654,
+    "accuracy": 0.434,
+    "macro_f1": 0.478
+   },
+   "this_head": {
+    "n": 654,
+    "accuracy": 0.659,
+    "macro_f1": 0.711
+   }
+  },
+  "energy_tags": {
+   "amused": {
+    "high": 1.0,
+    "low": 0.0
+   },
+   "confused": {
+    "high": 0.03,
+    "low": 0.0
+   },
+   "happy": {
+    "high": 0.92,
+    "low": 0.0
+   },
+   "neutral": {
+    "high": 0.32,
+    "low": 0.0
+   },
+   "sad": {
+    "high": 0.03,
+    "low": 0.08
+   }
+  }
+ }
+}
